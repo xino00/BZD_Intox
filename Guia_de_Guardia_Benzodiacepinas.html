@@ -586,7 +586,7 @@ td p { margin: 8px 0; }
 <p>Si la sobredosis fue intencional, completa la valoración psiquiátrica antes del alta. Si ha recibido flumazenilo, advierte al paciente que no conduzca ni maneje maquinaria durante al menos 24 h (CIMA §4.7).</p>
 <p class="sources source-links"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] PDF p. 13</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] PDF pp. 9–10</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R1.4, PDF p. 5</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.7, PDF p. 5</a></p>
 <div class="note warning"><p><strong>El tiempo de observación depende de la evolución y del riesgo de resedación.</strong> Las 4–6 h son orientativas: UpToDate no aclara si se cuentan desde la ingesta o desde la llegada. Tampoco fija un intervalo para el alta después de la última dosis de flumazenilo.</p><p>La pausa de la perfusión cada 6 h permite comprobar si reaparece la sedación. El paciente debe seguir en observación hasta que la recuperación se mantenga, teniendo en cuenta la BZD, las coingestas y sus características clínicas.</p></div>
-<p class="sources source-links"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Observación condicionada, PDF p. 13</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Perfusión, PDF p. 2</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Resedación y vigilancia, PDF pp. 3–4</a></p>
+<p class="sources source-links"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Apartado «Disposition»: observación tras ingesta aislada</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.2: pausa de la perfusión cada 6 h</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.4: vigilancia por resedación</a></p>
 <a class="back" href="#inicio">Volver al inicio</a>
 </section>
 
@@ -653,7 +653,8 @@ td p { margin: 8px 0; }
     const details = document.createElement('details');
     details.className = 'source-disclosure';
     const summary = document.createElement('summary');
-    summary.textContent = `Consultar fuentes (${p.querySelectorAll('a').length})`;
+    const sourceCount = new Set([...p.querySelectorAll('a')].map(a => a.getAttribute('href'))).size;
+    summary.textContent = `Consultar fuentes (${sourceCount})`;
     p.before(details);
     details.append(summary, p);
   });
