@@ -259,7 +259,6 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(
 /* Cover uses only the existing date, title, subtitle and author as grid regions. */
 .cover .slide-content{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr auto}
 .cover-date{grid-column:1/-1;padding:23px 38px;border-bottom:var(--border);font-size:20px;font-weight:700}
-.cover-disclaimer{display:block;margin-top:6px;font-size:15px;font-weight:500}
 .cover h1{grid-column:1/-1;display:flex;flex-direction:column;justify-content:center;background:var(--pink);padding:36px 38px;font-size:80px;line-height:1.08}
 .cover-subtitle{display:flex;align-items:center;font-size:34px;font-weight:800;line-height:1.2;padding:36px 38px;margin:0;background:var(--green);border-top:var(--border);border-right:var(--border)}
 .author{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:36px 38px;border-top:var(--border);font-size:25px}.author span{font-size:21px;color:var(--darkgray)}
@@ -430,7 +429,7 @@ body.js:not(.reading){overflow:hidden}
 <noscript><p class="noscript">Modo lectura. Todas las diapositivas están disponibles.</p></noscript>
 <main class="deck" aria-label="Presentación clínica"><div class="stage"><section class="slide cover" id="portada" data-title="Intoxicación aguda por benzodiazepinas" tabindex="-1" aria-labelledby="title-portada">
 <div class="slide-content">
-<p class="cover-date">25 de septiembre de 2026<span class="cover-disclaimer">Material educativo · No es un protocolo asistencial aprobado</span></p>
+<p class="cover-date">25 de septiembre de 2026</p>
 <h1 id="title-portada">Intoxicación aguda<br>por benzodiazepinas</h1>
 <p class="cover-subtitle">Sesiones clínicas de residentes de Medicina Familiar y Comunitaria</p>
 <div class="author"><strong>Dr. Juan Arenas Montiel</strong><span>R2 de Medicina Familiar y Comunitaria</span></div>
@@ -448,7 +447,7 @@ body.js:not(.reading){overflow:hidden}
 <p class="safety">Alcohol, opioides y otros depresores aumentan el riesgo.</p>
 <p class="caution">Focalidad o convulsiones: ampliar el diagnóstico.</p>
 </div>
-<footer class="slide-footer"><div class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">[1] Manual del 12 de Octubre. 2022; §3.2.1</a>; <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5] Greller y Gupta. UpToDate. 2025; clínica y diagnóstico diferencial</a></div><span class="folio" aria-label="Diapositiva 2">02</span></footer>
+<footer class="slide-footer"><div class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">[1] Manual del 12 de Octubre. 9.ª ed., 2022; §3.2.1, p. 1448</a>; <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5] Greller y Gupta. UpToDate. 2025; clínica y diagnóstico diferencial</a></div><span class="folio" aria-label="Diapositiva 2">02</span></footer>
 
 </section>
 <section class="slide support" id="soporte" data-title="Soporte inicial y reevaluación" tabindex="-1" aria-labelledby="title-soporte">
@@ -456,7 +455,7 @@ body.js:not(.reading){overflow:hidden}
 <h2 id="title-soporte">Soporte inicial y reevaluación</h2>
 <div class="support-grid">
  <div><h3>Protege, ventila y está estable</h3><p class="decision">Observación<br>monitorizada</p><p>Reevaluar conciencia y ventilación.<br>Vigilar si aumenta la sedación.</p></div>
- <div class="urgent"><h3>Obstrucción o hipoventilación</h3><ol class="actions"><li>Abrir vía aérea</li><li>Aspirar si precisa</li><li>Ventilar con bolsa-mascarilla</li></ol></div>
+ <div class="urgent"><h3>Obstrucción o hipoventilación</h3><ol class="actions"><li>Abrir vía aérea</li><li>Aspirar si precisa</li><li>Oxígeno si precisa: mascarilla con reservorio</li><li>Ventilar con Ambú si hipoventila</li></ol></div>
 </div>
 <p class="safety"><strong>Intubación ante fallo</strong> hemodinámico, neurológico o respiratorio<br>que no responde a un antídoto indicado o cuando este no procede.<span class="row-context">No retrasar una intubación necesaria para probar el antídoto.</span></p>
 <div class="parallel"><p>Medir glucemia capilar y corregir la hipoglucemia.<br>Monitorizar y canalizar una vía IV.</p><p><strong>Valorar intoxicación opioide</strong><br>Si depresión respiratoria: naloxona<br>y soporte ventilatorio</p></div>
@@ -482,21 +481,21 @@ body.js:not(.reading){overflow:hidden}
 <div class="slide-content">
 <h2 id="title-carbon">Carbón activado</h2>
 <p class="large-statement">Valorar ante<br>coingesta potencialmente mortal</p>
-<div class="charcoal-context"><h3>Condición necesaria</h3><p>Un tóxico que el carbón pueda adsorber.</p><h3>Tiempo desde la ingesta</h3><p><strong>Preferentemente en la primera hora.</strong></p><p>Después: individualizar según sustancia y formulación.</p></div>
+<div class="charcoal-context"><h3>Tóxicos adsorbibles</h3><p>Por ejemplo: colchicina o ácido acetilsalicílico.</p><h3>Tiempo desde la ingesta</h3><p><strong>Preferiblemente en la primera hora.</strong></p><p>Después: individualizar según sustancia y formulación.</p></div>
 <p class="charcoal-safety">No dar carbón si no se puede asegurar<br>la protección de la vía aérea.</p>
 <p class="caution">La sedación puede progresar y aumentar el riesgo de aspiración.</p>
 </div>
-<footer class="slide-footer"><div class="sources"><a href="https://link.springer.com/article/10.1186/s13613-020-00762-9" target="_blank" rel="noopener">[2] SRLF–SFMU. 2020; R4.2.2: tiempo</a>; <a href="https://doi.org/10.1080/15563650.2025.2609807" target="_blank" rel="noopener">[3] Hoegberg et al. 2026; p. 423–424, 447</a>; <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5] UpToDate. 2025; descontaminación</a></div><span class="folio" aria-label="Diapositiva 5">05</span></footer>
+<footer class="slide-footer"><div class="sources"><a href="https://link.springer.com/article/10.1186/s13613-020-00762-9" target="_blank" rel="noopener">[2] SRLF–SFMU. 2020; R4.2.2: tiempo</a>; <a href="https://doi.org/10.1080/15563650.2025.2609807" target="_blank" rel="noopener">[3] Hoegberg et al. 2026; p. 423–424, 447</a>; <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5] UpToDate. 2025; p. 8: descontaminación y coingestas</a></div><span class="folio" aria-label="Diapositiva 5">05</span></footer>
 
 </section>
 <section class="slide selection" id="seleccion" data-title="Flumazenilo: ¿cuándo?" tabindex="-1" aria-labelledby="title-seleccion">
 <div class="slide-content">
 <h2 id="title-seleccion">Flumazenilo: ¿cuándo?</h2>
 <div class="selection-grid">
- <div><h3>Antes de administrarlo, comprobar</h3><ul><li>Historia o coingestas inciertas</li><li>Uso crónico / dependencia</li><li>Epilepsia o crisis previas.<br>Crisis presenciada o sospechada.</li><li>Coingesta proconvulsivante<br>conocida o sospechada</li><li>BZD necesarias para estatus o PIC elevada</li></ul><p class="risk-summary">Abstinencia, convulsiones y arritmias</p></div>
- <div><h3>Coma por sospecha de BZD</h3><p class="selected-decision">Puede evitar la intubación<br>en pacientes seleccionados</p><p><strong>SRLF: condicional, GRADE 2+</strong><br>UpToDate: no recomendado<br>en este escenario.</p></div>
+ <div><h3>Antes de administrarlo, comprobar</h3><ul><li>Historia o coingestas inciertas</li><li>Uso crónico / dependencia</li><li>Epilepsia o crisis previas.<br>Crisis presenciada o sospechada.</li><li>Coingesta proconvulsivante conocida o sospechada<br>(p. ej., antidepresivos tricíclicos)</li><li>BZD necesarias para estatus o PIC elevada</li></ul><p class="risk-summary">Abstinencia, convulsiones y arritmias</p></div>
+ <div><h3>En el coma por benzodiazepinas</h3><p class="selected-decision">No usar de rutina</p><p>SRLF contempla su uso para evitar la intubación en pacientes seleccionados.<br><br>UpToDate desaconseja usarlo con este fin.</p></div>
 </div>
-<p class="safety">Soporte simultáneo y capacidad inmediata de intubación.</p>
+<p class="safety">Mantener la monitorización y el soporte respiratorio.<br>Disponer de personal y equipo para intubar sin demora si es necesario.</p>
 </div>
 <footer class="slide-footer"><div class="sources"><a href="https://link.springer.com/article/10.1186/s13613-020-00762-9" target="_blank" rel="noopener">[2] Mégarbane et al. 2020; R6.1.1</a>; <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html" target="_blank" rel="noopener">[4] AEMPS–CIMA; §§4.3–4.4</a>; <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5] Greller y Gupta. UpToDate. 2025; flumazenilo</a></div><span class="folio" aria-label="Diapositiva 6">06</span></footer>
 
@@ -505,29 +504,29 @@ body.js:not(.reading){overflow:hidden}
 <div class="slide-content">
 <h2 id="title-pauta">Pauta adaptada y titulación</h2>
 <p class="product">Flumazenilo <strong>0,1 mg/ml</strong> · Adulto seleccionado · Adaptación Manual–CIMA</p>
-<ol class="dose-sequence"><li><h3>Inicio IV · Manual</h3><p class="dose">0,25 <span>mg</span></p><p class="volume">en 1 minuto<br>2,5 ml sin diluir</p></li><li><h3>Si no mejora tras 1 min</h3><p class="dose">0,25 <span>mg</span></p><p class="volume">Repetir y reevaluar</p></li></ol><div class="dose-limit"><h3>Máximo propuesto · CIMA</h3><p class="dose">2 <span>mg</span></p><p class="volume">acumulados<br>Detener antes si responde</p></div>
+<ol class="dose-sequence"><li><h3>Inicio IV · Manual del 12 de Octubre</h3><p class="dose">0,25 <span>mg</span></p><p class="volume">en 1 minuto<br>2,5 ml sin diluir</p></li><li><h3>Si no mejora tras 1 min</h3><p class="dose">0,25 <span>mg</span></p><p class="volume">Repetir y reevaluar</p></li></ol><div class="dose-limit"><h3>Máximo propuesto · CIMA</h3><p class="dose">2 <span>mg</span></p><p class="volume">acumulados<br>Detener antes si responde</p></div>
 <p class="us-label-note">Ficha estadounidense, sobredosis: hasta 3 mg acumulados; excepcionalmente hasta 5 mg si la respuesta a 3 mg es parcial. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8175c1eb-80af-48f1-813c-c8f0e736d894" target="_blank" rel="noopener">[8]</a></p>
-<p class="takeaway">Tras cada dosis: conciencia, ventilación y protección de vía aérea.</p>
-<p class="caution">Sin respuesta: reconsiderar la causa.<br>Si sigue indicada pese al flumazenilo, intubar sin demora.</p>
+<p class="takeaway">Tras cada dosis: reevaluar conciencia, ventilación y protección de la vía aérea.</p>
+<p class="caution">Sin respuesta: reconsiderar la causa.<br>No retrasar la intubación si persiste la indicación.</p>
 </div>
-<footer class="slide-footer"><div class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">[1] Manual. 2022; tabla 3, p. 1443: bolos</a>; <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html" target="_blank" rel="noopener">[4] AEMPS–CIMA; §4.2: límite propuesto</a>; <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9" target="_blank" rel="noopener">[2] Mégarbane et al. 2020; fundamento R6.1.1</a></div><span class="folio" aria-label="Diapositiva 7">07</span></footer>
+<footer class="slide-footer"><div class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">[1] Manual del 12 de Octubre. 9.ª ed., 2022; tabla 3, p. 1443: bolos</a>; <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html" target="_blank" rel="noopener">[4] AEMPS–CIMA; §4.2: límite propuesto</a>; <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9" target="_blank" rel="noopener">[2] Mégarbane et al. 2020; fundamento R6.1.1</a></div><span class="folio" aria-label="Diapositiva 7">07</span></footer>
 
 </section>
 <section class="slide resedation" id="resedacion" data-title="Resedación tras flumazenilo" tabindex="-1" aria-labelledby="title-resedacion">
 <div class="slide-content">
 <h2 id="title-resedacion">Resedación tras flumazenilo</h2>
-<p class="resedation-lead">Si reaparece la sedación tras responder al flumazenilo,<br>valorar perfusión.</p>
+<p class="resedation-lead">Si reaparece la sedación tras responder inicialmente al flumazenilo,<br>valorar perfusión.</p>
 <div class="infusion-grid"><div><h3>Perfusión titulada · CIMA</h3><p class="infusion-dose">0,1–0,4 <span>mg/h IV</span></p></div><div><h3>Detener y reevaluar cada 6 h</h3><p>Comprobar si reaparece sedación.<br>Mantener vigilancia.</p></div></div>
 <div class="infusion-example"><h3>Perfusión propuesta por el Manual del 12 de Octubre</h3><p>2 mg en 500 ml de glucosado al 5 %, en 6 h ≈ <strong>0,33 mg/h</strong></p><p>Titular según respuesta.</p></div>
 <p class="caution">Si no hay mejoría con bolos, plantear otras causas.</p>
 </div>
-<footer class="slide-footer"><div class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html" target="_blank" rel="noopener">[4] AEMPS–CIMA; §§4.2 y 6.6: perfusión, pausa y dilución</a>; <a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">[1] Manual. 2022; tabla 3, p. 1443: ejemplo de perfusión</a></div><span class="folio" aria-label="Diapositiva 8">08</span></footer>
+<footer class="slide-footer"><div class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html" target="_blank" rel="noopener">[4] AEMPS–CIMA; §§4.2 y 6.6: perfusión, pausa y dilución</a>; <a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">[1] Manual del 12 de Octubre. 9.ª ed., 2022; tabla 3, p. 1443: perfusión</a></div><span class="folio" aria-label="Diapositiva 8">08</span></footer>
 
 </section>
 <section class="slide destination" id="destino" data-title="Plan" tabindex="-1" aria-labelledby="title-destino">
 <div class="slide-content">
 <h2 id="title-destino">Plan</h2>
-<div class="destination-grid"><div><h3>Alta tras observación y recuperación</h3><ul class="recovery"><li>Nivel de consciencia recuperado<br>y deambulación segura</li><li>Constantes normales</li><li>Pruebas revisadas y riesgo bajo</li></ul><p class="observation"><strong>4–6 h orientativas</strong><br>Ingesta aislada, síntomas resueltos<br>y bajo riesgo</p></div><div><h3>Ingreso según toxicidad y riesgo</h3><p class="admit"><strong>Clínica persistente &gt;6 h</strong><br>Ingreso monitorizado hasta resolución.<sup><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5]</a></sup><br>Antes si precisa soporte.</p><p class="critical"><strong>Fallo orgánico / soporte avanzado</strong><br>Cuidados críticos.</p><p class="anticipated">Coingesta peligrosa: destino según<br>el tóxico y la toxicidad prevista.</p></div></div>
+<div class="destination-grid"><div><h3>Alta tras observación y recuperación</h3><ul class="recovery"><li>Nivel de consciencia recuperado<br>y deambulación segura</li><li>Constantes normales</li><li>Pruebas revisadas y riesgo bajo</li></ul><p class="observation"><strong>4–6 h orientativas</strong><br>Ingesta aislada, síntomas resueltos<br>y bajo riesgo</p></div><div><h3>Ingreso y nivel de vigilancia</h3><p class="admit"><strong>Signos de intoxicación &gt;6 h</strong><br>Ingreso monitorizado hasta resolución.<sup><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5]</a></sup></p><p class="critical"><strong>Ventilación mecánica o fallo orgánico</strong><br>Cuidados críticos, sin esperar 6 h.</p><p class="anticipated"><strong>Coingesta a dosis tóxicas con riesgo de fallo orgánico</strong><br>Cuidados críticos aunque aún haya pocos síntomas.</p></div></div>
 <p class="safety">Intoxicación voluntaria: solicitar valoración por Psiquiatría antes del alta.</p>
 </div>
 <footer class="slide-footer"><div class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning" target="_blank" rel="noopener">[5] Greller y Gupta. UpToDate. 2025; Disposition</a>; <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults" target="_blank" rel="noopener">[7] Levine. UpToDate. 2025</a>; <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9" target="_blank" rel="noopener">[2] Mégarbane et al. 2020; R1.3–R1.4</a>; <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html" target="_blank" rel="noopener">[4] AEMPS–CIMA; §4.7</a></div><span class="folio" aria-label="Diapositiva 9">09</span></footer>
