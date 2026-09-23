@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guía de guardia de intoxicación por benzodiacepinas en adultos. Decisiones rápidas, pauta adaptada de flumazenilo, vigilancia y desarrollo con ocho fuentes locales.">
+<title>Intoxicación por benzodiacepinas | Guía de guardia</title>
+<style>
+:root {
+  color-scheme: light;
+  --paper: #FFFFFF;
+  --surface: #F7F7F8;
+  --ink: #202125;
+  --muted: #565963;
+  --blue: #002FA7;
+  --blue-soft: #F0F4FF;
+  --line: #DBDDE3;
+  --rail: 264px;
+  --gutter: clamp(28px, 4vw, 64px);
+  --body-size: 18px;
+  --detail-size: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 0; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: var(--body-size)/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+a, a:visited { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+::selection { background: var(--blue); color: var(--paper); }
+h1, h2, h3, h4 { font-family: inherit; font-weight: 700; line-height: 1.15; text-align: left; overflow-wrap: break-word; }
+h1 { max-width: 20ch; margin: 20px 0 24px; font-size: clamp(42px, 4.5vw, 70px); letter-spacing: -.045em; line-height: 1.04; }
+h2 { margin: 0 0 24px; font-size: 36px; letter-spacing: -.025em; }
+h3 { margin: 40px 0 18px; font-size: 29px; letter-spacing: -.02em; }
+h4 { margin: 30px 0 16px; font-size: 23px; letter-spacing: -.015em; }
+p { margin: 0 0 20px; }
+strong { font-weight: 700; }
+ul, ol { padding-left: 1.35em; }
+li { margin: .6em 0; padding-left: .2em; }
+button, input { font-family: inherit; font-size: 15px; }
+button { cursor: pointer; }
+button svg, a svg { width: 19px; height: 19px; flex: none; }
+.tool-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 40px; padding: 8px 12px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 4px; font-weight: 500; }
+.tool-button:hover { background: var(--surface); border-color: var(--muted); }
+.tool-button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: var(--paper); }
+.utilitybar { display: flex; align-items: center; gap: 16px; min-height: 64px; padding: 10px 32px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.utility-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; flex: none; }
+.current-section { margin-right: auto; color: var(--muted); font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.search-open { width: 218px; justify-content: flex-start; color: var(--muted); background: var(--surface); }
+.search-open kbd { margin-left: auto; }
+kbd { font: inherit; font-size: 12px; line-height: 1.2; padding: 2px 6px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); }
+.js-only, .menu-toggle { display: none; }
+.enhanced .js-only { display: inline-flex; }
+.enhanced .menu-toggle { display: none; }
+.masthead { padding: 52px var(--gutter) 46px; border-bottom: 1px solid var(--line); }
+.document-type { margin: 0; color: var(--blue); font-size: 13px; line-height: 1.4; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.subtitle { max-width: 57ch; margin-bottom: 20px; font-size: 22px; line-height: 1.5; color: var(--muted); }
+.meta { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 30px; }
+.hero-links a { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; font-size: 15px; font-weight: 700; text-decoration: none; }
+.hero-links a:first-child { padding: 11px 18px; background: var(--blue); color: var(--paper); border: 1px solid var(--blue); border-radius: 3px; }
+.hero-links a:first-child:hover { background: #002581; }
+.hero-links a + a:hover { text-decoration: underline; }
+.index { padding: 26px 18px; background: var(--surface); border-right: 1px solid var(--line); scrollbar-width: thin; }
+.index a { display: block; padding: 9px 13px; border-left: 2px solid transparent; color: var(--muted); font-size: 14px; line-height: 1.4; text-decoration: none; }
+.index a:hover { color: var(--blue); background: var(--paper); }
+.index a[aria-current="location"] { color: var(--blue); border-left-color: var(--blue); background: var(--paper); font-weight: 700; }
+.index .primary-link { color: var(--ink); font-weight: 600; }
+.index h2 { margin: 30px 0 9px; padding: 0 15px; color: var(--ink); font-size: 11px; line-height: 1.4; letter-spacing: .1em; text-transform: uppercase; }
+.index ul { list-style: none; padding: 0; margin: 0; }
+.index li { margin: 0; padding: 0; }
+.index .nav-brand { display: flex; align-items: center; gap: 11px; padding: 0 8px 24px; margin: 0 5px; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 17px; line-height: 1.3; font-weight: 700; letter-spacing: -.02em; }
+.nav-brand svg { width: 24px; height: 24px; color: var(--blue); }
+.nav-copy { margin: 28px 5px 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.nav-copy a { display: flex; align-items: center; gap: 8px; padding: 9px 8px; font-size: 13px; }
+main { min-width: 0; padding: 44px var(--gutter) 72px; }
+.part { margin-top: 76px; }
+.part:first-child { margin-top: 0; }
+.part > h2 { position: relative; margin: 0 0 26px; padding: 20px 0 24px; border-top: 3px solid var(--blue); border-bottom: 1px solid var(--line); }
+.part > p, .entry > p, .part > ul, .entry > ul, .part > ol:not(.ref-list) { max-width: 76ch; }
+.part-intro { margin-bottom: 30px; font-size: 19px; line-height: 1.65; }
+.entry { margin-top: 50px; padding-top: 36px; border-top: 1px solid var(--line); }
+.entry > h3 { margin-top: 0; }
+.entry > ul { padding-left: 1.25em; }
+.entry > ul > li { margin-bottom: 24px; }
+.entry > ul > li > strong:first-child, .note li > strong:first-child { display: block; margin-bottom: 5px; }
+.actions { display: grid; grid-template-columns: minmax(150px, 23%) minmax(0, 1fr); margin: 26px 0; border-bottom: 1px solid var(--line); }
+.actions dt, .actions dd { padding: 21px 0; border-top: 1px solid var(--line); }
+.actions dt { padding-right: 24px; color: var(--blue); font-weight: 700; }
+.actions dd { margin: 0; }
+.note { padding: 24px 26px; margin: 30px 0; border: 1px solid var(--line); border-left: 4px solid var(--blue); background: var(--surface); }
+.note p:last-child { margin-bottom: 0; }
+.note li { margin-bottom: 18px; }
+.note li:last-child { margin-bottom: 0; }
+.note.warning { background: var(--paper); border-left-color: var(--ink); }
+.algorithm { margin: 30px 0; padding: 0; border: 1px solid var(--line); border-top: 3px solid var(--blue); }
+.algorithm figcaption { padding: 15px 26px; margin: 0; color: var(--blue); background: var(--surface); border-bottom: 1px solid var(--line); font-size: 12px; line-height: 1.4; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.support { padding: 26px; background: var(--blue-soft); border-bottom: 1px solid var(--line); }
+.support strong { display: block; margin-bottom: 12px; color: var(--blue); font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.02em; }
+.parallel { margin: 0; padding: 17px 26px; border-bottom: 1px solid var(--line); font-size: 16px; font-weight: 600; }
+.branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.branch { display: flex; flex-direction: column; padding: 26px; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.65; }
+.branch:nth-child(odd) { border-right: 1px solid var(--line); }
+.branch h4 { margin: 0 0 14px; font-size: 22px; }
+.branch p { margin-bottom: 22px; }
+.branch a { margin-top: auto; font-size: 14px; font-weight: 600; }
+.algorithm .follow { margin: 0; padding: 24px 26px; background: var(--surface); font-size: 16px; }
+.follow strong { display: block; margin-bottom: 8px; }
+.sources, .small, .dose-context, .source-disclosure, .document-footer { font-size: var(--detail-size); line-height: 1.6; color: var(--muted); }
+.sources { margin: 18px 0 26px; }
+.sources a { display: inline; margin-right: 10px; }
+.source-disclosure { margin: 16px 0 26px; }
+.source-disclosure summary { width: fit-content; cursor: pointer; padding: 8px 0; font-size: 13px; }
+.source-disclosure summary::marker { color: var(--blue); }
+.source-disclosure[open] summary { color: var(--blue); }
+.source-disclosure .sources { padding: 12px 18px; border-left: 2px solid var(--line); margin: 4px 0 0; background: var(--surface); }
+.more { font-size: 15px; margin-top: 24px; }
+.more a { display: inline-block; padding: 6px 0; }
+.dose-block { margin: 30px 0 24px; }
+#pauta-principal { padding: 28px; border: 1px solid var(--line); border-top: 4px solid var(--blue); background: var(--paper); }
+#pauta-principal > h4 { margin-top: 0; font-size: 25px; }
+.dose-context { margin-bottom: 24px; color: var(--blue); font-weight: 600; }
+.table-wrap { width: 100%; overflow-x: auto; margin: 26px 0; scrollbar-width: thin; }
+table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.65; }
+caption { text-align: left; font-size: 16px; line-height: 1.45; font-weight: 700; margin-bottom: 16px; }
+th, td { text-align: left; vertical-align: top; padding: 20px; border: 0; border-bottom: 1px solid var(--line); overflow-wrap: break-word; }
+thead th { color: var(--paper); background: var(--blue); font-size: 13px; line-height: 1.45; font-weight: 600; letter-spacing: .015em; }
+tbody th { width: 25%; font-weight: 600; background: var(--surface); border-right: 1px solid var(--line); }
+tbody tr:nth-child(even) td { background: #FCFCFD; }
+td p { margin: 8px 0; }
+.dose-table .dose { display: block; margin: 0 0 12px; color: var(--blue); font-size: 27px; line-height: 1.25; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.comparison table { min-width: 780px; font-size: 15px; }
+.comparison tbody th { width: 22%; }
+.comparison td { width: 39%; }
+.ref-list { padding-left: 28px; margin: 30px 0; overflow-wrap: anywhere; }
+.ref-list li { padding: 0 0 24px 12px; margin: 0 0 28px; border-bottom: 1px solid var(--line); }
+.ref-list li::marker { color: var(--blue); font-weight: 700; }
+.ref-list .title { font-weight: 700; color: var(--ink); }
+.ref-list p { margin: 0 0 10px; }
+.back { display: inline-block; margin-top: 24px; font-size: 14px; }
+.document-footer { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 24px; }
+.skip { position: fixed; top: -10rem; left: 16px; z-index: 60; padding: 12px 18px; border: 2px solid var(--blue); background: var(--paper); }
+.skip:focus { top: 12px; }
+[id] { scroll-margin-top: 88px; }
+.search-dialog { width: min(720px, calc(100% - 32px)); max-height: 85vh; max-height: 85svh; padding: 28px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); box-shadow: 0 24px 80px #20212533; }
+.search-dialog::backdrop { background: #20212566; }
+.search-heading { display: flex; align-items: flex-start; gap: 12px; justify-content: space-between; }
+.search-heading h2 { font-size: 28px; margin: 4px 0 0; }
+.search-field { display: flex; align-items: center; gap: 12px; margin: 24px 0 16px; padding: 2px 14px; border: 1px solid var(--line); border-radius: 3px; }
+.search-field:focus-within { border-color: var(--blue); box-shadow: 0 0 0 2px var(--blue); }
+.search-field svg { width: 20px; height: 20px; flex: none; color: var(--blue); }
+.search-field input { width: 100%; min-width: 0; min-height: 48px; padding: 8px 0; border: 0; outline: none; background: var(--paper); color: var(--ink); font-size: 18px; }
+.search-status { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.search-results { padding: 0; margin: 0; list-style: none; }
+.search-results li { margin: 0; padding: 0; }
+.search-results a { display: block; border-top: 1px solid var(--line); padding: 20px 8px; text-decoration: none; }
+.search-results a:hover { background: var(--surface); }
+.search-results strong { display: block; font-size: 18px; }
+.search-results span { display: block; color: var(--muted); font-size: 15px; line-height: 1.6; margin-top: 8px; }
+@media screen {
+  body { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr); grid-template-rows: 64px auto 1fr; }
+  body.large-text { --body-size: 21px; --detail-size: 16px; }
+  body.large-text table, body.large-text .branch, body.large-text .parallel, body.large-text .algorithm .follow { font-size: 19px; }
+  .utilitybar { grid-column: 2; grid-row: 1; position: sticky; top: 0; z-index: 20; }
+  .masthead { grid-column: 2; grid-row: 2; width: 100%; max-width: 1216px; justify-self: center; }
+  .shell { display: contents; }
+  .index { grid-column: 1; grid-row: 1 / 4; position: sticky; top: 0; align-self: start; height: 100vh; height: 100svh; overflow-y: auto; }
+  main { grid-column: 2; grid-row: 3; width: 100%; max-width: 1216px; justify-self: center; }
+}
+@media screen and (max-width: 1120px) {
+  :root { --rail: 230px; --gutter: 32px; }
+  .index { padding-left: 12px; padding-right: 12px; }
+  .branches { grid-template-columns: 1fr; }
+  .branch:nth-child(odd) { border-right: 0; }
+  .utilitybar { padding-left: 24px; padding-right: 24px; }
+  .search-open { width: 160px; }
+}
+@media screen and (max-width: 900px) {
+  :root { --gutter: 24px; --body-size: 18px; }
+  body { display: block; }
+  body.large-text { --body-size: 21px; }
+  .utilitybar { height: 64px; gap: 8px; padding: 8px 16px; }
+  .utility-actions { gap: 6px; }
+  .current-section, .search-open kbd, .print-label { display: none; }
+  .enhanced .menu-toggle { display: inline-flex; }
+  .tool-button { min-height: 42px; min-width: 40px; padding: 8px 10px; font-size: 14px; }
+  .search-open { width: auto; }
+  h1 { font-size: clamp(36px, 6.8vw, 62px); letter-spacing: -.045em; }
+  h2 { font-size: 31px; }
+  h3 { font-size: 27px; }
+  h4 { font-size: 22px; }
+  .subtitle { font-size: 20px; }
+  .masthead { padding-top: 36px; padding-bottom: 34px; }
+  .hero-links { gap: 14px 24px; }
+  .index { position: static; height: auto; width: 100%; border-right: 0; border-bottom: 1px solid var(--line); }
+  .enhanced .index { position: fixed; top: 64px; left: 0; bottom: 0; width: min(330px, calc(100% - 32px)); height: calc(100vh - 64px); height: calc(100svh - 64px); border-right: 1px solid var(--line); z-index: 25; box-shadow: 14px 0 40px #20212522; }
+  .enhanced:not(.nav-open) .index { display: none; }
+  main { padding-top: 32px; }
+  .part { margin-top: 56px; }
+  .part > h2 { padding-top: 20px; padding-bottom: 20px; }
+  .part-intro { font-size: 18px; }
+  .entry { margin-top: 40px; padding-top: 30px; }
+  .actions { display: block; }
+  .actions dt { padding: 18px 0 8px; }
+  .actions dd { border: 0; padding: 0 0 22px; }
+  .note, #pauta-principal { padding: 22px 20px; }
+  #pauta-principal > h4 { font-size: 24px; }
+  .support, .branch, .parallel, .algorithm .follow, .algorithm figcaption { padding: 20px; }
+  .support strong { font-size: 24px; }
+  .branch { font-size: 17px; }
+  .table-wrap:not(.comparison) table, .table-wrap:not(.comparison) tbody, .table-wrap:not(.comparison) caption { display: block; }
+  .table-wrap:not(.comparison) thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .table-wrap:not(.comparison) tr { display: block; margin-bottom: 20px; border: 1px solid var(--line); }
+  .table-wrap:not(.comparison) tbody th, .table-wrap:not(.comparison) td { display: block; width: auto; border: 0; padding: 16px; }
+  .table-wrap:not(.comparison) tbody th { border-bottom: 1px solid var(--line); }
+  .dose-table .dose { font-size: 25px; }
+  .search-dialog { padding: 20px; }
+  .search-heading h2 { font-size: 25px; }
+}
+@media screen and (max-width: 380px) {
+  :root { --gutter: 18px; }
+  .utilitybar { padding-left: 10px; padding-right: 10px; }
+  .tool-button { padding: 8px; gap: 6px; }
+  h1 { font-size: 34px; }
+  .meta { font-size: 13px; }
+  .note, #pauta-principal { padding: 18px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+
+@media print {
+  @page { size: A4; margin: 15mm 15mm 16mm; }
+  :root { --body-size: 10pt; --detail-size: 8pt; --gutter: 0px; }
+  *, *::before, *::after { color: #000000 !important; background: #FFFFFF !important; box-shadow: none !important; border-color: #000000 !important; outline: none !important; }
+  body { display: block; line-height: 1.4; }
+  .utilitybar, .index, .skip, .hero-links, .search-dialog, .back, .more, .document-footer, .source-disclosure > summary { display: none !important; }
+  .shell { display: block; }
+  .masthead { padding: 3mm 0; border-top: 3pt solid; border-bottom: 1pt solid; }
+  h1 { font-size: 27pt; letter-spacing: -.025em; margin: 2mm 0 3mm; }
+  h2 { font-size: 17pt; }
+  h3 { font-size: 13pt; margin: 5mm 0 2.5mm; }
+  h4 { font-size: 10.5pt; margin: 4mm 0 2mm; }
+  h1, h2, h3, h4, caption, figcaption { break-after: avoid; }
+  .document-type, .subtitle { font-size: 10pt; }
+  .meta { font-size: 8pt; }
+  .meta, .subtitle { margin-bottom: 1.5mm; }
+  main { padding: 0; }
+  p { margin: 0 0 3mm; }
+  p, li { orphans: 3; widows: 3; }
+  .part { margin-top: 6mm; }
+  .part:first-child { margin-top: 4mm; }
+  .part > h2 { padding: 2mm 0; margin: 0 0 3mm; border-top: 2pt solid; border-bottom: 1pt solid; }
+  .part-intro { margin-bottom: 3mm; font-size: 10pt; }
+  .entry { margin-top: 5mm; padding-top: 4mm; border-top-width: 1pt; }
+  .entry > ul > li { margin-bottom: 2mm; }
+  .actions { grid-template-columns: 28mm minmax(0, 1fr); margin: 3mm 0; }
+  .actions dt, .actions dd { padding: 2mm 0; border-top-width: .5pt; }
+  .actions dt { padding-right: 3mm; }
+  .actions dd { break-inside: avoid; }
+  .note { padding: 3mm; margin: 3mm 0; border-width: 1pt; break-inside: avoid; }
+  .note li { margin-bottom: 2mm; }
+  .algorithm { margin: 4mm 0; border-width: 1pt; break-inside: avoid; }
+  .algorithm figcaption, .support, .parallel, .branch, .algorithm .follow { padding: 2.5mm; font-size: 9pt; border-width: .5pt; }
+  .support strong { font-size: 12pt; margin-bottom: 2mm; }
+  .branches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .branch h4 { font-size: 10pt; margin-bottom: 2mm; }
+  .branch p { margin-bottom: 2mm; }
+  .branch a { font-size: 8pt; }
+  .follow strong { margin-bottom: 1mm; }
+  .sources { margin: 2mm 0 3mm; line-height: 1.35; break-before: avoid; }
+  .sources a { margin-right: 2mm; }
+  p:has(+ .sources), p:has(+ .source-disclosure) { break-after: avoid; }
+  .source-disclosure { margin: 0; padding: 0; }
+  .source-disclosure::details-content { display: block; content-visibility: visible; }
+  .source-disclosure > .sources { display: block; padding: 0; border: 0; margin: 2mm 0 3mm; }
+  .dose-block { margin: 4mm 0; break-inside: avoid; }
+  #pauta-principal { padding: 3mm; margin-right: 0; border-width: 1pt; }
+  #pauta-principal > h4 { font-size: 10.5pt; }
+  .dose-context { margin-bottom: 2mm; }
+  .table-wrap { overflow: visible; margin: 3mm 0; }
+  table { font-size: 9pt; line-height: 1.4; }
+  .comparison table { min-width: 0; font-size: 9pt; }
+  caption { font-size: 9.5pt; margin-bottom: 2mm; }
+  th, td { padding: 2.3mm; border-width: .5pt; }
+  thead { display: table-header-group; break-after: avoid; }
+  thead th { font-size: 8.5pt; border-bottom-width: 1pt; }
+  tr { break-inside: avoid; }
+  .dose-table .dose { font-size: 13pt; margin-bottom: 2mm; }
+  a { text-decoration: none; }
+  .ref-list { font-size: 9pt; line-height: 1.35; padding-left: 6mm; margin: 3mm 0; }
+  .ref-list li { margin: 2mm 0; padding: 0 0 2mm 1mm; border-bottom-width: .5pt; break-inside: avoid; }
+  .ref-list p { margin-bottom: .5mm; }
+  .ref-list .small { font-size: 8pt; line-height: 1.35; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#consulta-rapida">Saltar a las decisiones de guardia</a>
+<div class="utilitybar" aria-label="Herramientas de lectura">
+<button type="button" class="tool-button menu-toggle js-only" aria-expanded="false" aria-controls="guide-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Índice</span></button>
+<span class="current-section">Guía de guardia</span>
+<div class="utility-actions">
+<button type="button" class="tool-button search-open js-only" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Buscar</span><kbd aria-hidden="true">/</kbd></button>
+<button type="button" class="tool-button text-size js-only" aria-label="Aumentar tamaño del texto" aria-pressed="false">A+</button>
+<button type="button" class="tool-button print-button js-only" aria-label="Imprimir guía"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7Z"/><path d="M17 11h.01"/></svg><span class="print-label">Imprimir</span></button>
+</div></div>
+<header class="masthead" id="inicio">
+<div class="cover-content">
+<p class="document-type">Guía de guardia</p>
+<h1>Intoxicación por benzodiacepinas</h1>
+<p class="subtitle">Actuación inicial, flumazenilo y observación en adultos con circulación espontánea.</p>
+<p class="meta">Dr. Juan Arenas Montiel, R2 MFyC · 10 de septiembre de 2026<br>Material educativo · No es un protocolo asistencial aprobado.</p>
+<div class="hero-links" aria-label="Accesos principales"><a href="#consulta-rapida">Consultar decisiones <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a><a href="#evaluacion">Leer la ampliación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5C9 3.5 5.5 3.5 3 4.5v15c2.5-1 6-1 9 1 3-2 6.5-2 9-1v-15c-2.5-1-6-1-9 1Z"/><path d="M12 5.5v15"/></svg></a></div>
+</div>
+</header>
+<div class="shell">
+<nav id="guide-nav" class="index" aria-label="Índice de la guía"><div class="index-inner">
+<a class="nav-brand" href="#inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5C9 3.5 5.5 3.5 3 4.5v15c2.5-1 6-1 9 1 3-2 6.5-2 9-1v-15c-2.5-1-6-1-9 1Z"/><path d="M12 5.5v15"/></svg><span>Guía de guardia</span></a>
+<h2>Consulta rápida</h2>
+<ul>
+<li><a href="#consulta-rapida">Algoritmo inicial</a></li>
+<li><a href="#primeros-minutos">Primeros minutos</a></li>
+<li><a href="#pruebas">Pruebas y coingestas</a></li>
+<li><a class="primary-link" href="#flumazenilo">Flumazenilo</a></li>
+<li><a href="#resedacion">Resedación y complicaciones</a></li>
+<li><a href="#carbon">Carbón activado</a></li>
+<li><a class="primary-link" href="#destino">Observación y destino</a></li>
+</ul>
+<h2>Ampliación</h2>
+<ul class="extended-index">
+<li><a href="#evaluacion">Evaluación clínica</a></li>
+<li><a href="#antidotos">Antídotos y preparación</a></li>
+<li><a href="#comparacion-pautas">Pautas originales</a></li>
+<li><a href="#descontaminacion">Descontaminación</a></li>
+<li><a href="#matices-destino">Vigilancia y alta</a></li>
+<li><a href="#bibliografia">Fuentes y alcance</a></li>
+</ul>
+
+</div></nav>
+<main>
+<section class="part" id="consulta-rapida" aria-labelledby="titulo-rapido">
+<h2 id="titulo-rapido">Decisiones de guardia</h2>
+<p class="part-intro">Cuando la ingesta es solo de benzodiacepinas (BZD), la mayoría de los pacientes mejora con soporte y vigilancia. La decisión de usar un antídoto depende del cuadro clínico, las coingestas y los riesgos de administrarlo.</p>
+<figure class="algorithm" aria-labelledby="titulo-algoritmo">
+<figcaption id="titulo-algoritmo">Valoración inicial</figcaption>
+<div class="support"><strong>Vía aérea, ventilación, circulación y glucemia</strong>Inicia las medidas de soporte mientras recoges la historia. Si la vía aérea, la oxigenación o la ventilación están comprometidas, actúa sin esperar los resultados de las pruebas ni completar una pauta de antídoto.</div>
+<p class="parallel">Valora por separado la indicación de naloxona y la de flumazenilo.</p>
+<div class="branches">
+<div class="branch"><h4>Paciente estable</h4><p>Si protege la vía aérea, oxigena y ventila bien, está hemodinámicamente estable y no se prevé deterioro, continúa con soporte y vigilancia. Reevalúa su estado de forma periódica.</p><a href="#destino">Observación y destino</a></div>
+<div class="branch"><h4>Sospecha de opioides</h4><p>Si hay depresión respiratoria y sospecha de opioides, administra naloxona mientras mantienes el soporte ventilatorio.</p><a href="#naloxona">Indicación y pautas</a></div>
+<div class="branch"><h4>Coma con sospecha de BZD</h4><p>Si el coma justificaría la intubación, SRLF propone valorar flumazenilo tras descartar los riesgos. Los autores de UpToDate desaconsejan usarlo con este fin.</p><a href="#flumazenilo">Selección antes de dosificar</a></div>
+<div class="branch"><h4>Historia incierta</h4><p>Si no conoces bien la exposición o sospechas dependencia o una coingesta proconvulsivante, mantén el soporte. Aclara estos riesgos antes de plantear flumazenilo.</p><a href="#evaluacion">Ampliar el diagnóstico</a></div>
+</div>
+<p class="follow"><strong>Vuelve a valorar la conciencia, la respiración y la protección de la vía aérea.</strong> Intuba si sigue indicado y vigila la aparición de resedación o toxicidad tardía. Decide el destino según la recuperación y el riesgo de deterioro.</p>
+</figure>
+<p class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] §2.1, pp. 1439–1440</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R6.1, PDF pp. 12–13</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] PDF pp. 8–11</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] PDF pp. 3–4</a></p>
+
+<article class="entry" id="primeros-minutos">
+<h3>Primeros minutos</h3>
+<dl class="actions">
+<dt>Vía aérea</dt><dd>Comprueba que la vía aérea esté permeable y protegida. Ajusta la posición del paciente, abre la vía aérea y aspira las secreciones si es necesario. Mantén disponible el soporte avanzado.</dd>
+<dt>Respiración</dt><dd>Valora la frecuencia, la profundidad y la eficacia de la respiración. Monitoriza la saturación. Aporta oxígeno y ventila con bolsa-mascarilla si es necesario. Una saturación normal con oxígeno suplementario no descarta hipoventilación.</dd>
+<dt>Circulación</dt><dd>Canaliza una vía IV, mide la presión arterial y realiza un ECG; mantén la monitorización. Si hay hipotensión, administra cristaloide isotónico. Si persiste, revisa la causa y la necesidad de más soporte.</dd>
+<dt>Neurológico</dt><dd>Comprueba la glucemia y corrige la hipoglucemia si la hay. Valora la conciencia, las pupilas, la focalidad y la presencia de convulsiones. Revisa también la temperatura, posibles traumatismos, parches y otras pistas sobre la exposición.</dd>
+</dl>
+<div class="note"><p><strong>Si la intubación sigue indicada, no la demores.</strong> SRLF recomienda secuencia rápida ante fallo hemodinámico, neurológico o respiratorio que no pueda revertirse con un antídoto apropiado (opinión de expertos, consenso fuerte). No es obligatorio probar flumazenilo antes de intubar.</p></div>
+<p class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] §2.1, pp. 1439–1440</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Soporte, PDF p. 8</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] ABCDE, PDF pp. 3–7</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R3.1, PDF p. 8</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] Fundamento R6.1.1, PDF p. 13</a></p>
+<p class="more"><a href="#via-aerea">Ampliar: Glasgow, capnografía e hipoglucemia</a></p>
+</article>
+
+<article class="entry" id="pruebas">
+<h3>Pruebas y coingestas</h3>
+<ul>
+<li><strong>No solicitar cribado urinario de rutina.</strong> Un resultado positivo puede deberse a una exposición previa o ser falso: por sí solo no demuestra que las BZD expliquen el cuadro. Un negativo tampoco las descarta, porque depende del ensayo utilizado. Guía el tratamiento por la clínica y solicita las determinaciones séricas que estén indicadas.</li>
+<li><strong>Aclara qué ha tomado, cuánto y cuándo.</strong> Pregunta por la sustancia, la formulación, la vía, la intención de la ingesta y las coingestas. Revisa el uso habitual de BZD, la dependencia y las crisis previas. Contrasta la información con acompañantes, emergencias, envases e historia clínica.</li>
+<li><strong>Busca otras sustancias que puedan cambiar el tratamiento.</strong> Si la ingesta es intencional o la historia es incierta, solicita paracetamol y salicilatos séricos. Interpreta sus concentraciones según el tóxico y el tiempo transcurrido. Completa el estudio con ECG y analítica según la clínica; en el paciente grave, incluye gasometría y lactato.</li>
+<li><strong>Si hay depresión respiratoria, valora una coingesta de opioides.</strong> Administra naloxona cuando los sospeches y mantén el soporte ventilatorio.</li>
+</ul>
+<p class="sources"><a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Cribado y determinaciones dirigidas, PDF p. 11</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Pruebas, PDF pp. 5–6</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Respiración, PDF p. 8</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Historia y pruebas, PDF pp. 3–6</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] Evaluación inicial, PDF pp. 2–3</a></p>
+<p class="more"><a href="#estudio-dirigido">Ampliar: estudio dirigido y diagnóstico diferencial</a></p>
+</article>
+
+<article class="entry" id="flumazenilo">
+<h3>Flumazenilo: a quién administrarlo</h3>
+<p>SRLF sugiere valorar flumazenilo cuando un <strong>coma por sospecha de BZD justificaría la intubación</strong>, siempre que se hayan descartado los riesgos y se mantengan la monitorización y el soporte (<strong>GRADE 2+, recomendación condicional</strong>). Los autores de UpToDate desaconsejan este uso. Que el paciente despierte antes no basta para justificar su administración.</p>
+<div class="note warning"><p><strong>Antes de administrarlo, revisa estos puntos:</strong></p>
+<ul>
+<li><strong>Contraindicaciones formales de CIMA.</strong> No lo administres si hay hipersensibilidad al flumazenilo o sus excipientes, si las BZD son necesarias para controlar un estatus epiléptico o una presión intracraneal elevada, o si existe intoxicación mixta con antidepresivos tricíclicos o tetracíclicos.</li>
+<li><strong>Riesgo convulsivo.</strong> Evita flumazenilo si hay epilepsia, crisis previas, presenciadas o sospechadas, o una coingesta proconvulsivante conocida o sospechada.</li>
+<li><strong>Uso crónico o dependencia.</strong> Evita flumazenilo y mantén el soporte. CIMA advierte del riesgo de abstinencia y convulsiones en estos pacientes, aunque no lo clasifica como contraindicación formal.</li>
+</ul>
+<p><strong>Si no puedes aclarar estos riesgos, mantén soporte y vigilancia.</strong> Flumazenilo puede precipitar abstinencia, convulsiones y arritmias. <a href="#seleccion-ampliada">Indicaciones y precauciones en cada fuente</a>.</p></div>
+<p class="sources"><a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R6.1.1 y fundamento, PDF pp. 12–13</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §§4.3–4.4, PDF pp. 3–4</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Selección, PDF pp. 9–11</a></p>
+<div class="dose-block" id="pauta-principal">
+<h4>Pauta principal: adaptación Manual–CIMA</h4>
+<p class="dose-context">Adulto seleccionado · Flumazenilo 0,1 mg/ml · Vía IV</p>
+<div class="table-wrap"><table class="dose-table"><caption>Titulación inicial con reevaluación tras cada dosis</caption><thead><tr><th scope="col">Paso</th><th scope="col">Administración y límite</th></tr></thead><tbody>
+<tr><th scope="row">Inicio<br><span class="small">Manual</span></th><td><span class="dose">0,25 mg IV en 1 minuto</span>Equivale a <strong>2,5 ml sin diluir</strong> a la concentración indicada.</td></tr>
+<tr><th scope="row">Si no mejora<br><span class="small">Manual</span></th><td><strong>Repetir 0,25 mg si no mejora tras 1 minuto, reevaluando tras cada dosis.</strong> Conservar esta formulación: el original no aclara si el minuto se cuenta desde el inicio o el final de la inyección; no convertirlo en una orden automática «cada minuto».</td></tr>
+<tr><th scope="row">Máximo propuesto<br><span class="small">Adaptación</span></th><td><span class="dose">2 mg acumulados</span>Durante la titulación inicial; <strong>detener antes si responde</strong>. Ocho dosis totales de 0,25 mg, incluida la primera, por cálculo. No es un límite «en una hora» ni autoriza reinicios automáticos.</td></tr>
+<tr><th scope="row">Reevaluar</th><td>Conciencia, ventilación y protección de vía aérea. <strong>Sin efecto claro tras dosis repetidas, reconsiderar la causa.</strong> Mantener soporte; si sigue indicada la intubación pese al flumazenilo, no demorarla.</td></tr>
+</tbody></table></div>
+<p class="sources">Bolos: <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] tabla 3, p. 1443</a> Concentración y límite tomado de otra pauta: <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §2, PDF p. 1</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.2, adulto/UCI, PDF p. 2</a> Soporte: <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] PDF p. 13</a></p>
+</div>
+<div class="note"><p><strong>Ficha estadounidense, sobredosis: hasta 3 mg acumulados; excepcionalmente hasta 5 mg si la respuesta a 3 mg es parcial. Corresponde a otra pauta.</strong> <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8175c1eb-80af-48f1-813c-c8f0e736d894">[8] DailyMed, PDF p. 19</a>. <a href="#limite-estadounidense">Ver la comparación</a>.</p></div>
+<p class="small">Adaptado del Manual del 12 de Octubre —bolos y ejemplo de perfusión— y de la ficha técnica de flumazenilo de AEMPS–CIMA —máximo propuesto de titulación y perfusión titulada por resedación—. Los documentos utilizados no demuestran superioridad de esta adaptación frente a otras pautas. <a href="#comparacion-pautas">Comparar las pautas originales</a>.</p>
+</article>
+
+<article class="entry" id="resedacion">
+<h3>Resedación y complicaciones</h3>
+<p><strong>Si el paciente vuelve a estar somnoliento después de una respuesta inicial,</strong> comprueba de nuevo la vía aérea y la ventilación, revisa las coingestas y valora si sigue indicado flumazenilo. Mantén monitorizados la conciencia, la respiración, la oximetría, el ECG, el pulso y la presión arterial.</p>
+<div class="dose-block">
+<div class="table-wrap"><table class="dose-table"><caption>Perfusión de flumazenilo por resedación — CIMA</caption><thead><tr><th scope="col">Situación</th><th scope="col">Conducta</th></tr></thead><tbody>
+<tr><th scope="row">Si sigue indicada</th><td><span class="dose">0,1–0,4 mg/h IV</span>Ajusta la velocidad a la respuesta. <strong>Diluye siempre</strong> en NaCl 0,9 % o glucosado al 5 %. <a href="#preparacion">Preparación y conservación</a>.</td></tr>
+<tr><th scope="row">Reevaluación</th><td><strong>Interrumpe la perfusión cada 6 h</strong> para comprobar si reaparece la sedación. El paciente debe seguir bajo vigilancia durante la pausa.</td></tr>
+<tr><th scope="row">Ejemplo del Manual</th><td><strong>2 mg en 500 ml de glucosado al 5 %, durante 6 h ≈ 0,33 mg/h.</strong> Si cambias la velocidad, también cambiará la duración. Antes de programar los ml/h, confirma el volumen final: el Manual no aclara si se refiere al volumen de diluyente o al de la mezcla preparada.</td></tr>
+</tbody></table></div>
+<p class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.2, PDF p. 2</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §6.6, PDF p. 8</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] tabla 3, p. 1443</a></p>
+</div>
+<p><strong>Si no responde a los bolos, revisa el diagnóstico antes de iniciar una perfusión.</strong> Aunque responda a flumazenilo, puede haber otras sustancias implicadas y la depresión respiratoria puede persistir.</p>
+<p><strong>Si convulsiona tras flumazenilo, asegura el soporte respiratorio y trata la crisis.</strong> UpToDate propone BZD en el extremo alto del rango habitual, fenobarbital o propofol, aunque no detalla una pauta de rescate. Las BZD pueden seguir siendo eficaces, ya que el antagonismo de flumazenilo es competitivo.</p>
+<p class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Ausencia de respuesta, PDF p. 2</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Vigilancia, PDF pp. 3–4</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Respuesta y coingestas, PDF p. 5</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Respiración y convulsiones, PDF p. 11</a></p>
+<p class="more"><a href="#vigilancia-antidoto">Ampliar: vigilancia, abstinencia y discrepancias sobre perfusión</a></p>
+</article>
+
+<article class="entry" id="carbon">
+<h3>Carbón activado</h3>
+<p><strong>No uses carbón de rutina si la ingesta es solo de BZD.</strong> Puede valorarse si hay una coingesta potencialmente mortal que el carbón pueda adsorber, teniendo en cuenta la sustancia, la formulación y el tiempo transcurrido. La vía aérea debe estar protegida, también frente a un posible deterioro posterior.</p>
+<p>Cuando está indicado, Hoegberg propone <strong>50 g en dosis única en adultos</strong>. Para BZD aislada recomienda valorar cada caso durante los primeros 30 min y desaconseja administrarlo después. En ingestas extraordinariamente grandes que ya requieren intubación, permite valorar una excepción. La pauta de UpToDate para coingestas se recoge en la ampliación.</p>
+<p class="sources"><a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Dosis y vía aérea, PDF pp. 7–8</a> <a href="https://doi.org/10.1080/15563650.2025.2609807">[3] BZD, p. 447 / PDF p. 31</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Descontaminación, PDF pp. 8–9</a></p>
+<p class="more"><a href="#descontaminacion">Ver ventanas, grados, excepciones y seguridad</a></p>
+</article>
+
+<article class="entry" id="destino">
+<h3>Observación y destino</h3>
+<dl class="actions">
+<dt>Cuidados críticos</dt><dd>El fallo orgánico o la necesidad de soporte avanzado requieren cuidados críticos. Si una coingesta supone un riesgo grave, no esperes al deterioro para ingresar al paciente.</dd>
+<dt>Vigilancia monitorizada</dt><dd>Mantén la vigilancia si persisten los síntomas, aparece resedación o hay riesgo de toxicidad tardía. UpToDate indica ingreso monitorizado si la toxicidad dura más de 6 h; el ingreso debe ser anterior si la situación lo requiere.</dd>
+<dt>Alta posible</dt><dd>Puede plantearse tras una ingesta aislada cuando se han resuelto los síntomas preocupantes, la recuperación se mantiene, el paciente camina con seguridad y el riesgo de deterioro es bajo. UpToDate orienta a 4–6 h de observación, sin precisar desde cuándo contarlas.</dd>
+</dl>
+<div class="note warning"><p><strong>Antes del alta, comprueba que la recuperación se mantiene.</strong> El tiempo de observación depende de la sustancia, las coingestas y el riesgo de resedación. Las fuentes no establecen un intervalo fijo después de flumazenilo.</p></div>
+<ul class="checklist">
+<li><strong>Si la ingesta fue intencional,</strong> el paciente necesita valoración psiquiátrica antes del alta.</li>
+<li><strong>Si ha recibido flumazenilo,</strong> adviértele que no conduzca ni maneje maquinaria durante al menos 24 h, según CIMA. La duración del ingreso dependerá de la evolución clínica.</li>
+</ul>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Destino, PDF pp. 12–13</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Destino, PDF pp. 9–10</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R1.3–R1.4, PDF pp. 4–5</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Vigilancia, PDF pp. 3–4</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.7, PDF p. 5</a></p>
+<p class="more"><a href="#matices-destino">Ampliar criterios de vigilancia y límites temporales</a></p>
+</article>
+</section>
+
+<section class="part ampliacion" id="evaluacion">
+<h2>Evaluación clínica</h2>
+<p class="part-intro">Qué buscar en la exploración, qué pruebas pedir y cuándo reforzar el soporte.</p>
+<h3>Clínica y signos de alarma</h3>
+<p>La ingesta oral aislada suele producir somnolencia, disartria, ataxia y nistagmo, con constantes relativamente conservadas. En ocasiones aparece excitación paradójica. La depresión respiratoria grave es poco habitual, pero puede ocurrir tras una sobredosis masiva, administración IV o coingesta de otros depresores. Si encuentras coma profundo, compromiso respiratorio marcado o shock, inicia soporte y busca otras causas.</p>
+<p>El alcohol, los opioides y otros depresores potencian la toxicidad. También influyen la edad, la enfermedad respiratoria, la hepatopatía, la acumulación y las interacciones. Además, la composición de los comprimidos de origen no regulado puede ser incierta. Diazepam y clordiazepóxido tienen metabolitos activos, por lo que su semivida no permite prever por sí sola cuánto durará la intoxicación. La cantidad ingerida, expresada como múltiplo de la dosis terapéutica, tampoco basta para decidir el alta.</p>
+<p class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] §3.2.1, p. 1448</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Farmacocinética y clínica, PDF pp. 2–4</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Tabla 1 y notas, PDF p. 20</a></p>
+<h3 id="estudio-dirigido">Historia, pruebas y diagnóstico diferencial</h3>
+<p>Pregunta qué sustancia ha tomado, en qué cantidad, a qué hora, por qué vía, en qué formulación y con qué intención. Revisa la medicación del paciente y de sus convivientes, incluidos productos sin receta, plantas y suplementos. Pregunta también por uso crónico de BZD, epilepsia, otras dependencias y comorbilidad. Si la exposición no está confirmada, mantén abierto el diagnóstico y busca otras causas según la exploración y la evolución.</p>
+<div class="table-wrap"><table><caption>Pruebas según la situación clínica</caption><thead><tr><th scope="col">Situación</th><th scope="col">Pruebas y finalidad</th></tr></thead><tbody>
+<tr><th scope="row">Paciente sedado</th><td>Glucemia capilar, ECG y concentraciones séricas de paracetamol, salicilatos y etanol; prueba de embarazo cuando proceda (UpToDate BZD). El cribado urinario no sustituye estas determinaciones.</td></tr>
+<tr><th scope="row">Sintomático o historia desconocida/poco fiable</th><td>Electrolitos, urea, creatinina, glucosa y análisis general de orina. ECG ante síntomas o exposición desconocida o potencialmente cardiotóxica (UpToDate general). El análisis general de orina es distinto del cribado toxicológico.</td></tr>
+<tr><th scope="row">Crítico con sobredosis desconocida</th><td>Hemograma, electrolitos, función renal, lactato y gasometría venosa o arterial; pruebas específicas según la exposición. Ante afectación importante, ampliar a cetonas, CK, función hepática, lipasa, calcio ionizado y magnesio (UpToDate crítico y general).</td></tr>
+<tr><th scope="row">Intencional, incierta o toxicidad inexplicada</th><td>Solicitar paracetamol y salicilatos séricos aunque haya pocos síntomas; interpretar según el tóxico y el tiempo. Añadir valproato, digoxina o litio si se sospecha exposición. SRLF recomienda estas determinaciones de forma dirigida.</td></tr>
+</tbody></table></div>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] PDF pp. 5–6</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] PDF pp. 3–6</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] PDF pp. 2–3</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R2.2–R2.3, PDF p. 6</a></p>
+<p><strong>Los hallazgos que no encajan deben hacerte ampliar el diagnóstico.</strong> La fiebre obliga a valorar infección; la focalidad o las convulsiones, lesión vascular, encefalitis, un estado poscrítico u otros tóxicos. Valora TC craneal si hay traumatismo o sospecha de lesión intracraneal. Un QRS o QTc anormal orienta a revisar posibles cardiotóxicos. Ante depresión respiratoria profunda o inestabilidad circulatoria, busca opioides, otras coingestas y enfermedad médica.</p>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Pruebas, PDF p. 5</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Diferencial, PDF p. 7</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] Circulation/Disability, PDF p. 6</a></p>
+<h4>Limitaciones del cribado urinario</h4>
+<p>Los inmunoensayos pueden dar falsos positivos y negativos. Algunos detectan mal alprazolam, clonazepam, lorazepam o midazolam, y un positivo puede corresponder a una exposición previa. Un panel de opiáceos negativo tampoco descarta fentanilo. La confirmación especializada puede tardar, así que no esperes a su resultado para iniciar soporte. Las concentraciones plasmáticas de BZD se correlacionan mal con la clínica y rara vez ayudan a decidir el tratamiento agudo.</p>
+<p><strong>El diagnóstico se apoya en la historia, la exploración y la evolución.</strong> El Manual propone la detección cualitativa en orina, mientras que SRLF y UpToDate señalan su utilidad limitada. Por ello, no se solicita de rutina para dirigir el tratamiento agudo; las concentraciones séricas se piden según la sospecha clínica.</p>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Pruebas, PDF pp. 5–6</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Cribado, PDF pp. 5–6</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Drug testing, PDF p. 11</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R2.2, PDF p. 6</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] §3.2.1, p. 1448</a></p>
+<h3 id="via-aerea">Vía aérea, monitorización e hipoglucemia</h3>
+<p><strong>La decisión de intubar depende de la función y de la evolución del paciente.</strong> En el capítulo del paciente crítico, UpToDate no considera suficiente un Glasgow ≤8 aislado si el paciente protege la vía aérea, oxigena, permanece hemodinámicamente estable y no se prevé deterioro, siempre con vigilancia estrecha. Su capítulo general favorece la intubación precoz ante disminución de conciencia, salvo una causa fácilmente reversible. SRLF R3.1 la recomienda ante fallo que no pueda revertirse con un antídoto apropiado. Mientras valoras y tratas la causa, mantén el soporte.</p>
+<p>Una cánula nasofaríngea puede resolver la obstrucción por pérdida de tono en un paciente seleccionado si se prevé una evolución favorable. <strong>La capnografía complementa la valoración respiratoria.</strong> UpToDate BZD la considera útil para detectar hipoventilación, aunque el capítulo del paciente crítico señala que su beneficio en respiración espontánea es incierto. Recuerda que, con oxígeno suplementario, la saturación puede mantenerse mientras empeora la ventilación.</p>
+<p class="sources"><a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] Vía aérea/respiración, PDF pp. 3–4</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Vía aérea, PDF p. 8</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Monitorización, PDF p. 8</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R3.1, PDF p. 8</a></p>
+<p><strong>Corrige la hipoglucemia de inmediato</strong> y vuelve a medirla si persiste la alteración de conciencia. UpToDate general indica 25 g de dextrosa en adultos; el capítulo del paciente crítico respalda la vía IV. La concentración, el volumen y la velocidad dependen del preparado y del protocolo local. No retrases la glucosa para administrar primero tiamina.</p>
+<p class="sources"><a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Tratamiento inicial, PDF p. 2</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] Disability, PDF p. 6</a></p>
+<a class="back" href="#inicio">Volver al inicio</a>
+</section>
+
+<section class="part" id="antidotos">
+<h2>Antídotos y preparación</h2>
+<h3 id="seleccion-ampliada">Flumazenilo: indicaciones y riesgos</h3>
+<p>SRLF sugiere valorar flumazenilo para evitar la intubación en el coma por sospecha de BZD, tras seleccionar al paciente y con monitorización y capacidad de intubación (<strong>GRADE 2+, consenso fuerte</strong>). Los autores de UpToDate desaconsejan tanto este uso como el diagnóstico en coma indiferenciado. En adultos, lo consideran para revertir una sobresedación durante un procedimiento, siempre que no haya uso crónico ni factores de riesgo (<strong>Grade 2C</strong>). Esta última recomendación no corresponde a sobredosis.</p>
+<p>La ficha CIMA incluye el uso diagnóstico ante pérdida de conciencia de causa desconocida, siempre sujeto a sus contraindicaciones y advertencias. Ante esta discrepancia, la guía sigue un criterio conservador: <strong>si la historia o las coingestas no permiten descartar los riesgos, mantén el soporte y evita flumazenilo.</strong></p>
+<p class="sources"><a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R6.1.1, PDF pp. 12–13</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Escenarios, PDF pp. 9–11</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Recomendación, PDF p. 14</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.1, PDF p. 1</a></p>
+<div class="table-wrap"><table><caption>Contraindicaciones y precauciones</caption><thead><tr><th scope="col">Situación</th><th scope="col">Conducta y diferencias entre fuentes</th></tr></thead><tbody>
+<tr><th scope="row">Contraindicaciones formales de CIMA, §4.3</th><td><strong>No lo administres</strong> si hay hipersensibilidad al flumazenilo o sus excipientes, si las BZD controlan una situación potencialmente mortal —como un estatus epiléptico o una presión intracraneal elevada—, o si hay intoxicación mixta con tricíclicos o tetracíclicos. Esta última contraindicación se aplica aunque el QRS no esté ensanchado.</td></tr>
+<tr><th scope="row">Exclusiones por riesgo convulsivo</th><td><strong>No lo administres</strong> ante epilepsia, crisis previas, presenciadas o sospechadas, o una coingesta proconvulsivante conocida o sospechada. Manual y SRLF excluyen epilepsia y proconvulsivantes; la tabla del Manual añade agitación. UpToDate también lo evita ante antecedentes o sospecha de crisis y cita tricíclicos y bupropión como ejemplos de proconvulsivantes.</td></tr>
+<tr><th scope="row">Precauciones por uso crónico o dependencia</th><td><strong>Evita flumazenilo y mantén el soporte.</strong> CIMA advierte del riesgo de abstinencia y convulsiones. El Manual desaconseja su uso si hay dependencia; SRLF destaca el riesgo con dosis altas crónicas, y los autores de UpToDate no lo administran a usuarios crónicos.</td></tr>
+<tr><th scope="row">Otras precauciones</th><td>La lesión cerebral, la presión intracraneal inestable y otras dependencias exigen especial precaución. Si hay hepatopatía, valora cuidadosamente la dosis y prolonga la observación cuando sea necesario. CIMA no exige ajuste renal y aconseja precaución en personas mayores.</td></tr>
+</tbody></table></div>
+<p class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §§4.2–4.4, PDF pp. 2–4</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] tabla 3, p. 1443</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] BZD, p. 1448</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] Fundamento, PDF p. 13</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Exclusiones, PDF pp. 9–11</a></p>
+<h3 id="preparacion">Preparación de flumazenilo 0,1 mg/ml</h3>
+<p>Estas instrucciones corresponden a <strong>flumazenilo 0,1 mg/ml</strong> de la ficha AEMPS–CIMA citada. Comprueba que sea la presentación disponible. Debe administrarlo un médico experimentado, con monitorización y soporte disponibles.</p>
+<div class="table-wrap"><table><caption>Concentración, dilución y conservación</caption><thead><tr><th scope="col">Dato</th><th scope="col">Aplicación</th></tr></thead><tbody>
+<tr><th scope="row">Presentación</th><td>Ampollas de 0,5 mg/5 ml o 1 mg/10 ml. Bolo de 0,25 mg: 2,5 ml sin diluir.</td></tr>
+<tr><th scope="row">Inyección</th><td>Puede inyectarse sin diluir o diluido. Úsalo solo si la solución es transparente y prácticamente libre de partículas.</td></tr>
+<tr><th scope="row">Perfusión</th><td>Diluye siempre en NaCl 0,9 % o glucosado al 5 %. No se ha demostrado compatibilidad con otras soluciones.</td></tr>
+<tr><th scope="row">Programación</th><td>La prescripción se expresa en mg/h. Calcula los ml/h a partir de la concentración final del preparado y confirma el volumen antes de programar la bomba. CIMA no fija una dilución única.</td></tr>
+<tr><th scope="row">Tras abrir</th><td>Las ampollas son de un solo uso: utiliza el contenido de inmediato y desecha el sobrante.</td></tr>
+<tr><th scope="row">Tras diluir</th><td>No refrigeres la solución. Su estabilidad física y química es de 24 h a 25 °C, pero debe usarse de inmediato salvo que el método de dilución evite la contaminación microbiológica. Si se conserva, el responsable debe asegurar el plazo y las condiciones de conservación. Desecha cualquier solución para perfusión después de 24 h.</td></tr>
+</tbody></table></div>
+<p class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §2, PDF p. 1</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Administración, PDF pp. 2–3</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §§6.3 y 6.6, PDF p. 8</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] Ejemplo, p. 1443</a></p>
+<h3 id="vigilancia-antidoto">Vigilancia tras flumazenilo</h3>
+<p>Vigila la conciencia, la respiración, la oximetría, el ECG, el pulso y la presión arterial. La duración de la vigilancia depende de la BZD, de su dosis y de las características del paciente. CIMA aconseja monitorización estrecha, preferiblemente en UCI, hasta estimar que el efecto de flumazenilo ha desaparecido. Su semivida de eliminación es de <strong>40–80 min</strong>, pero ese dato no determina cuándo dar el alta.</p>
+<p>Si reaparece la sedación, CIMA permite una perfusión. UpToDate prefiere bolos intermitentes y aconseja consultar a Toxicología cuando se plantea una perfusión, por su mayor riesgo de efectos adversos. Sigue una sola pauta, sin sumar los esquemas de ambas fuentes.</p>
+<p><strong>Si aparecen síntomas de abstinencia pese a una dosificación controlada,</strong> CIMA contempla 5 mg de diazepam o 5 mg de midazolam en inyección IV lenta, con valoración individual. Esta pauta se refiere a abstinencia y no debe tomarse como rescate para una crisis sostenida. Ante convulsiones, UpToDate considera eficaces las BZD, fenobarbital o propofol; el Manual, en cambio, afirma que las crisis precipitadas no responderán a BZD.</p>
+<p class="sources"><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.4, PDF pp. 3–4</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §5.2, PDF p. 7</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Resedación y crisis, PDF pp. 10–11</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] §2.1, p. 1439</a></p>
+<h3 id="comparacion-pautas">Flumazenilo: pautas originales, por escenario</h3>
+<p>Las pautas siguientes corresponden a distintas fuentes y situaciones clínicas. Son alternativas a la <a href="#pauta-principal">pauta adaptada</a>: no sumes sus dosis ni intercambies máximos o intervalos.</p>
+<div class="table-wrap comparison" tabindex="0" role="region" aria-label="Comparación de pautas de flumazenilo, desplazable horizontalmente"><table><caption>Comparación de las pautas originales de flumazenilo</caption><thead><tr><th scope="col">Fuente y escenario</th><th scope="col">Pauta original</th><th scope="col">Condiciones y precauciones</th></tr></thead><tbody>
+<tr><th scope="row">Manual, cap. 95</th><td>0,25 mg IV en 1 min; repetir si no mejora tras 1 min «hasta 8 veces». Mantenimiento: 2 mg en 500 ml de SG 5 % durante 6 h.</td><td>No queda claro desde cuándo se cuenta el minuto ni si la primera dosis está incluida entre las ocho. Por eso, el texto del Manual no permite fijar un máximo inequívoco. <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] tabla 3, p. 1443</a></td></tr>
+<tr><th scope="row">CIMA, adulto/UCI</th><td>0,3 mg IV inicial; evaluar a 60 s; si precisa, 0,1 mg a intervalos de 60 s hasta 2 mg totales o despertar. Resedación: 0,1–0,4 mg/h; detener cada 6 h para reevaluar.</td><td>La ficha no precisa cuánto debe durar la inyección inicial. Sus bolos son distintos de los de la pauta adaptada. <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.2, PDF p. 2</a></td></tr>
+<tr><th scope="row">SRLF, fundamento R6.1.1</th><td>0,1 mg cada 30 s hasta conciencia compatible con ventilación eficaz y protección de vía aérea. Perfusión IV con dosis horaria igual a la dosis eficaz acumulada de titulación.</td><td>No se especifican la vía de los bolos, el máximo ni la duración. El paciente requiere vigilancia en cuidados continuados; la ausencia de un máximo descrito no permite prolongar la titulación indefinidamente. <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] PDF p. 13</a></td></tr>
+<tr><th scope="row">UpToDate, adulto seleccionado</th><td>0,2 mg IV en 1–2 min; después 0,3 mg y 0,5 mg IV cada 1–2 min, hasta respuesta o 1 mg acumulado inicial. Respuesta en 2–5 min; efecto máximo aproximadamente 6–10 min tras dosis.</td><td>Se refiere a adultos sin tolerancia ni antecedentes convulsivos. Los autores desaconsejan usarlo para el diagnóstico o para evitar la intubación en sobredosis. No detallan producto ni preparación. <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Adult dosing, PDF p. 10</a></td></tr>
+<tr><th scope="row">UpToDate, resedación</th><td>Repetir su pauta hasta efecto, sin superar 3 mg en cualquier intervalo de 1 h. Perfusión descrita de 0,25–1 mg/h para efecto BZD prolongado o prolongación en insuficiencia hepática.</td><td>El máximo inicial sigue siendo 1 mg; el límite horario se aplica a la resedación. Se prefieren los bolos intermitentes. Si se plantea una perfusión, consulta a Toxicología. No se especifican la preparación ni la duración. <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] PDF pp. 10–11</a></td></tr>
+<tr><th scope="row">CIMA, anestesia</th><td>0,2 mg IV en 15 s; evaluar a 60 s; si precisa, 0,1 mg cada 60 s hasta 1 mg.</td><td>Esta pauta es de anestesia. Su velocidad de inyección y su máximo no deben aplicarse a cuidados intensivos. <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.2, PDF p. 2</a></td></tr>
+<tr><th scope="row">Manual, cap. 96</th><td>0,2 mg IV en 15 s; después 0,1 mg/min hasta 1 mg. Aparece tras ausencia de respuesta a 10 mg de naloxona.</td><td>Se describe en intoxicación por opioides o policonsumo. La falta de respuesta a naloxona, por sí sola, no justifica administrar flumazenilo. <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/trastornos-por-consumo-de-alcohol-y-otras-drogas/" target="_blank" rel="noopener">[1] tabla 18, p. 1477</a></td></tr>
+</tbody></table></div>
+<h4 id="limite-estadounidense">Límite de la ficha estadounidense</h4>
+<p>La ficha estadounidense de flumazenilo publicada en DailyMed contempla, en sobredosis del adulto, una titulación hasta 3 mg acumulados. Excepcionalmente, si la respuesta a 3 mg es parcial, permite continuar lentamente hasta un total de 5 mg. Estos límites pertenecen a una titulación con bolos e intervalos distintos; no amplían el máximo de 2 mg de la adaptación Manual–CIMA ni son un límite común a todas las fuentes de EEUU.</p>
+<p class="sources"><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8175c1eb-80af-48f1-813c-c8f0e736d894">[8] DailyMed, dosificación en sobredosis del adulto, PDF p. 19</a></p>
+<h3 id="naloxona">Naloxona: indicación independiente</h3>
+<p><strong>Si hay depresión respiratoria y sospecha de opioides, administra naloxona mientras mantienes oxigenación y ventilación.</strong> UpToDate BZD contempla la vía parenteral o intranasal. SRLF la recomienda en el coma por sospecha opioide que justificaría intubación (<strong>GRADE 1+, consenso fuerte</strong>). Ajusta la dosis hasta recuperar la ventilación. Una respuesta insuficiente no justifica por sí sola administrar flumazenilo.</p>
+<div class="table-wrap"><table><caption>Naloxona: pautas según la fuente</caption><thead><tr><th scope="col">Fuente y situación clínica</th><th scope="col">Administración y datos no especificados</th></tr></thead><tbody>
+<tr><th scope="row">SRLF, sospecha opioide</th><td>0,04 mg cada 60 s. Si el opioide es de acción prolongada o liberación retardada, se propone perfusión IV con una dosis horaria igual a la mitad de la dosis eficaz acumulada y vigilancia en cuidados continuados. No se especifican la vía de los bolos, el máximo, la duración ni el tiempo de observación.</td></tr>
+<tr><th scope="row">UpToDate crítico: posible dependencia, si puede mantenerse la ventilación</th><td>Inicio con 0,04 o 0,05 mg IV; como alternativa, 0,1 mg IM. Duplica la dosis previa hasta revertir la depresión respiratoria. Este inicio se reserva para una posible dependencia cuando puede mantenerse la ventilación. No se especifican intervalos, máximo ni perfusión.</td></tr>
+</tbody></table></div>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Respiración, PDF p. 8</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R6.1.2 y fundamento, PDF pp. 12–13</a> <a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">[6] Airway stabilization, PDF p. 3</a></p>
+<a class="back" href="#inicio">Volver al inicio</a>
+</section>
+
+<section class="part" id="descontaminacion">
+<h2>Descontaminación</h2>
+<p>En la ingesta aislada de BZD, el soporte suele ser suficiente. El carbón no se recomienda de rutina porque no se ha demostrado un beneficio clínico que compense el riesgo de aspiración asociado a la sedación.</p>
+<div class="table-wrap"><table><caption>Hoegberg: recomendación específica para BZD aislada</caption><thead><tr><th scope="col">Momento o modalidad</th><th scope="col">Recomendación</th></tr></thead><tbody>
+<tr><th scope="row">Dentro de 30 min</th><td>Valorar individualmente el beneficio y el riesgo; no administrarlo de rutina.</td></tr>
+<tr><th scope="row">30 min–2 h</th><td>Sugiere no administrar dosis única: <strong>2, D</strong>.</td></tr>
+<tr><th scope="row">Más de 2 h</th><td>Recomienda no administrar dosis única: <strong>1, D</strong>.</td></tr>
+<tr><th scope="row">Dosis adicional o múltiples</th><td>Recomienda en contra de cada modalidad: <strong>1, D</strong>.</td></tr>
+</tbody></table></div>
+<p class="sources"><a href="https://doi.org/10.1080/15563650.2025.2609807">[3] BZD, p. 447 / PDF p. 31</a> <a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Tabla 4, PDF p. 10</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] PDF pp. 8–9</a>. En Hoegberg, 1 = fuerte; 2 = condicional; D = certeza muy baja. Consenso o fuerza no equivalen a certeza alta.</p>
+<h3>Excepciones y dosis por fuente</h3>
+<p><strong>Hoegberg propone 50 g en dosis única en adultos cuando esté indicado.</strong> En ingestas extraordinariamente grandes que ya requieren intubación por depresión de conciencia, permite valorar su administración por sonda. No fija una cantidad a partir de la cual darlo ni amplía el plazo de administración. Las coingestas deben valorarse por separado.</p>
+<p><strong>UpToDate BZD propone 1 g/kg por vía oral o sonda gástrica</strong> si hay una coingesta potencialmente mortal y adsorbible, como colchicina o salicilatos. El paciente debe proteger la vía aérea por sí mismo o mediante un tubo endotraqueal con neumotaponamiento. No se detallan máximo absoluto ni plazo de administración; es una pauta distinta de los 50 g de Hoegberg.</p>
+<p class="sources"><a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Dosis, p. 423 / PDF p. 7</a> <a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Fundamento BZD, PDF p. 31</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Excepción, PDF pp. 8–9</a></p>
+<h3>Contraindicaciones y protección de la vía aérea</h3>
+<div class="table-wrap"><table><caption>Hoegberg: situaciones que cambian la decisión</caption><thead><tr><th scope="col">Situación</th><th scope="col">Conducta</th></tr></thead><tbody>
+<tr><th scope="row">Reflejos protectores ausentes sin intubación o pérdida prevista; riesgo de perforación gastrointestinal</th><td>No administrar: <strong>1, D</strong>.</td></tr>
+<tr><th scope="row">Riesgo aumentado de aspiración, ausencia de peristaltismo o necesidad de endoscopia digestiva alta</th><td>Sugiere no administrar: <strong>2, D</strong>.</td></tr>
+<tr><th scope="row">Peristaltismo disminuido o necesidad de antídoto oral</th><td>Valoración individual del beneficio/riesgo.</td></tr>
+</tbody></table></div>
+<p>Antes de dar carbón, valora si el paciente puede perder la protección de la vía aérea. No lo intubes solo para administrarlo cuando no se esperan complicaciones significativas de la intoxicación. Si tanto la intubación como el carbón están indicados, puede administrarse por sonda. Evita colocar una sonda nasogástrica u orogástrica únicamente para dar carbón a un paciente no intubado. En una ingesta con riesgo vital y pocas alternativas, sí puede valorarse la intubación con este fin, sopesando los riesgos del procedimiento.</p>
+<p class="sources"><a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Buenas prácticas de vía aérea, PDF p. 7</a> <a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Contraindicaciones, PDF p. 8</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Descontaminación y vía aérea, PDF pp. 7–8</a></p>
+<h3>Cómo decidir si administrar carbón</h3>
+<ol>
+<li><strong>Toxicidad.</strong> Comprueba si la dosis ingerida puede causar toxicidad clínicamente significativa. Si no puede, el carbón no está indicado.</li>
+<li><strong>Adsorción.</strong> Debe haber al menos un tóxico que el carbón pueda adsorber. No adsorbe en grado clínicamente significativo metanol, potasio, hierro, litio, corrosivos ni destilados del petróleo.</li>
+<li><strong>Tiempo.</strong> Sigue la recomendación para ese tóxico y esa formulación. No hay un plazo válido para todas las sustancias.</li>
+<li><strong>Seguridad.</strong> Da la dosis única si está indicada y no hay contraindicaciones actuales o previstas. Si las hay, corrígelas cuando sea posible y vuelve a valorar la indicación.</li>
+<li><strong>Dosis adicional.</strong> Valórala si la absorción persiste o se retrasa, siempre que esté indicada para ese tóxico y pueda administrarse con seguridad.</li>
+<li><strong>Dosis múltiples.</strong> Su objetivo es aumentar la eliminación y se valoran por separado, aunque no haga falta una dosis adicional. En BZD aislada se desaconsejan ambas modalidades.</li>
+</ol>
+<p>Consulta a Toxicología si desconoces el tóxico, la cantidad o el momento de la ingesta. También puede ayudar cuando hay vaciamiento gástrico retrasado, coingestas, comorbilidad, problemas de vía aérea o recursos limitados. La figura de Hoegberg no detalla las dosis, los intervalos ni la duración de las dosis adicionales o múltiples.</p>
+<p class="sources"><a href="https://doi.org/10.1080/15563650.2025.2609807">[3] Figura 1 y notas, p. 428 / PDF p. 12</a></p>
+<h3>Otras fuentes y medidas</h3>
+<p>Como pauta general, el Manual propone 25–50 g de carbón en 250 ml de agua, habitualmente antes de 2 h; su apartado de BZD también contempla lavado gástrico. SRLF desaconseja el carbón y el lavado sistemáticos (GRADE 2−). Para una cantidad potencialmente tóxica de una sustancia adsorbible, recoge 25–100 g de carbón en adultos durante la primera hora, si no hay contraindicaciones. Después, la decisión debe individualizarse. En BZD aislada, sigue la recomendación específica de Hoegberg y valora las coingestas por separado.</p>
+<p>SRLF solo contempla el lavado durante la primera hora si el tóxico no es adsorbible, la cantidad es potencialmente tóxica y existe alto riesgo de lesión orgánica, siempre sin contraindicaciones (opinión de expertos). No debe hacerse de rutina por BZD. La irrigación intestinal total suele ser innecesaria y, si se utiliza, exige una vía aérea protegida. Ni la diuresis forzada, ni la hemodiálisis, ni las dosis múltiples de carbón aumentan eficazmente la eliminación de BZD. Las coingestas pueden requerir un tratamiento diferente.</p>
+<p class="sources"><a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] §2.3.1, pp. 1441–1442</a> <a href="https://profesionales.msd.es/manual-12-de-octubre/toxicologia-y-medicina-legal/intoxicaciones/" target="_blank" rel="noopener">[1] BZD, p. 1448</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R4.1–R4.2, PDF pp. 9–10</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Irrigación, PDF p. 9</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Eliminación, PDF p. 12</a></p>
+<a class="back" href="#inicio">Volver al inicio</a>
+</section>
+
+<section class="part" id="matices-destino">
+<h2>Vigilancia y criterios de alta</h2>
+<p>Revisa la conciencia y las constantes con la frecuencia que requiera el paciente. Que la exploración inicial sea normal no descarta toxicidad tardía por paracetamol, hipoglucemiantes o formulaciones de liberación prolongada. Mantén la vigilancia si hay resedación, acumulación o una exposición que todavía no se ha aclarado.</p>
+<p>La toxicidad moderada, o el riesgo de desarrollarla, requiere observación o cuidados intermedios. Si hay fallo orgánico o necesidad de soporte avanzado, el paciente necesita cuidados críticos. SRLF también los indica ante exposición a cardiotóxicos con anomalías clínicas, analíticas o ECG, o cuando hay riesgo de fallo orgánico aunque todavía existan pocos síntomas. Consulta a Toxicología en casos graves o complejos y valora el traslado si pueden hacer falta antídotos o técnicas que no estén disponibles.</p>
+<p class="sources"><a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Destino, PDF pp. 9–10</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] Tabla 13, toxicidad diferida</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R1.3, PDF pp. 4–5</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R2.1, PDF p. 5</a> <a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Destino, PDF pp. 12–13</a></p>
+<h3>Antes del alta</h3>
+<p>UpToDate BZD orienta a 4–6 h de observación tras una ingesta aislada, siempre que hayan desaparecido los síntomas preocupantes y el paciente camine con seguridad. Si la toxicidad persiste más de 6 h, indica ingreso monitorizado. El capítulo general de UpToDate exige que el paciente esté asintomático y tenga un riesgo bajo de deterioro. SRLF permite finalizar la vigilancia si el tóxico está identificado, tiene vida media corta y no supone riesgo de efectos graves o lesión orgánica. Además, las constantes, la exploración y las pruebas indicadas deben ser normales; el paciente debe estar orientado y sin efecto psicoactivo residual. Son criterios generales de expertos, no una regla validada para todas las BZD.</p>
+<p>Si la sobredosis fue intencional, completa la valoración psiquiátrica antes del alta. Si ha recibido flumazenilo, advierte al paciente que no conduzca ni maneje maquinaria durante al menos 24 h (CIMA §4.7).</p>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] PDF p. 13</a> <a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">[7] PDF pp. 9–10</a> <a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">[2] R1.4, PDF p. 5</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] §4.7, PDF p. 5</a></p>
+<div class="note warning"><p><strong>El tiempo de observación depende de la evolución y del riesgo de resedación.</strong> Las 4–6 h son orientativas: UpToDate no aclara si se cuentan desde la ingesta o desde la llegada. Tampoco fija un intervalo para el alta después de la última dosis de flumazenilo.</p><p>La pausa de la perfusión cada 6 h permite comprobar si reaparece la sedación. El paciente debe seguir en observación hasta que la recuperación se mantenga, teniendo en cuenta la BZD, las coingestas y sus características clínicas.</p></div>
+<p class="sources"><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">[5] Observación condicionada, PDF p. 13</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Perfusión, PDF p. 2</a> <a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">[4] Resedación y vigilancia, PDF pp. 3–4</a></p>
+<a class="back" href="#inicio">Volver al inicio</a>
+</section>
+
+<section class="part" id="bibliografia">
+<h2>Fuentes y alcance</h2>
+<p>Las referencias identifican los documentos utilizados y los apartados consultados. La revisión se limita a los apartados indicados en cada referencia; no abarca todos los capítulos completos ni los estudios originales citados en las revisiones. Los enlaces abren las páginas de las fuentes, no los PDF consultados. Los localizadores «PDF p.» corresponden a esos ejemplares; UpToDate requiere suscripción.</p>
+<ol class="ref-list">
+<li id="ref1"><p class="title">Manual de Diagnóstico y Terapéutica Médica del Hospital 12 de Octubre.</p><p>Miranda Godoy R, Campos Escudero S. Intoxicaciones. En: <em>Manual de diagnóstico y terapéutica médica del Hospital 12 de Octubre.</em> 9.ª ed. Madrid: Hospital Universitario 12 de Octubre; 2022. Cap. 95; p. 1439–1460.</p><p><strong>Consulta adicional:</strong> López Alba A, Parra González A. Trastornos por consumo de alcohol y otras drogas. En: <em>Manual de diagnóstico y terapéutica médica del Hospital 12 de Octubre.</em> 9.ª ed. Madrid: Hospital Universitario 12 de Octubre; 2022. Cap. 96; p. 1461–1480.</p><p><a href="https://profesionales.msd.es/manual-12-de-octubre/" target="_blank" rel="noopener">Abrir Manual</a> · <a href="https://dialnet.unirioja.es/servlet/libro?codigo=980626" target="_blank" rel="noopener">Datos de la edición</a></p><p class="small">Apartados consultados: manejo general, BZD y tablas de antídotos del cap. 95; opioides del cap. 96 para comparar escenarios. Localizadores: tabla 3, p. 1443; BZD, §3.2.1, p. 1448; tabla 18 del cap. 96, p. 1477.</p></li>
+<li id="ref2"><p class="title">Mégarbane B, Oberlin M, Alvarez JC, Balen F, Beaune S, Bédry R, et al.</p><p><em>Management of pharmaceutical and recreational drug poisoning.</em> Ann Intensive Care. 2020;10:157. DOI: 10.1186/s13613-020-00762-9.</p><p><a href="https://link.springer.com/article/10.1186/s13613-020-00762-9">Abrir SRLF–SFMU</a></p><p class="small">Apartados consultados: R1.3–R1.4, R2, R3.1, R4 y R6.1.1–R6.1.2, con sus fundamentos.</p></li>
+<li id="ref3"><p class="title">Hoegberg LCG, Gosselin S, Buckley NA, Wood DM, Shepherd G, Hanley J, et al.</p><p><em>Recommendations from the Clinical Toxicology Recommendations Collaborative on the administration of activated charcoal in acute oral overdose.</em> Clin Toxicol (Phila). 2026;64(6):419–475. DOI: 10.1080/15563650.2025.2609807.</p><p><a href="https://doi.org/10.1080/15563650.2025.2609807">Abrir recomendaciones de carbón</a></p><p class="small">Apartados consultados: BZD (PDF p. 31), dosis (p. 7), seguridad (p. 8), tabla 4 (p. 10) y figura 1 (p. 12).</p></li>
+<li id="ref4"><p class="title">Agencia Española de Medicamentos y Productos Sanitarios.</p><p>Ficha técnica de flumazenilo 0,1 mg/ml, solución inyectable y para perfusión. AEMPS–CIMA, documento 82049. Revisión declarada del texto: noviembre de 2017.</p><p><a href="https://cima.aemps.es/cima/dochtml/ft/82049/FT_82049.html">Abrir ficha oficial</a></p><p class="small">Apartados cotejados: indicaciones, posología, contraindicaciones, vigilancia, farmacocinética y preparación. Ficha oficial consultada el 10/09/2026; comprobar la presentación disponible y el protocolo del centro.</p></li>
+<li id="ref5"><p class="title">Greller H, Gupta A. <em>Benzodiazepine poisoning.</em></p><p>UpToDate. Actualización del tema: 20/08/2025; revisión bibliográfica declarada hasta agosto de 2026.</p><p><a href="https://www.uptodate.com/contents/benzodiazepine-poisoning">Abrir capítulo BZD</a></p><p class="small">Apartados consultados: clínica, pruebas, flumazenilo, resedación, carbón y destino; tablas pertinentes.</p></li>
+<li id="ref6"><p class="title">Sivilotti MLA. <em>Initial management of the critically ill adult with an unknown overdose.</em></p><p>UpToDate. Actualización: 04/12/2025; revisión bibliográfica declarada hasta agosto de 2026.</p><p><a href="https://www.uptodate.com/contents/initial-management-of-the-critically-ill-adult-with-an-unknown-overdose">Abrir capítulo del paciente crítico</a></p><p class="small">Apartados consultados: evaluación, ABCDE, vía aérea, monitorización y naloxona; anexos pertinentes.</p></li>
+<li id="ref7"><p class="title">Levine MD. <em>General approach to drug poisoning in adults.</em></p><p>UpToDate. Actualización: 18/09/2025; revisión bibliográfica declarada hasta agosto de 2026.</p><p><a href="https://www.uptodate.com/contents/general-approach-to-drug-poisoning-in-adults">Abrir abordaje general</a></p><p class="small">Apartados consultados: historia, pruebas, glucemia, toxicidad diferida, destino y evaluación psiquiátrica; tablas pertinentes.</p></li>
+<li id="ref8"><p class="title">Baxter Healthcare Corporation.</p><p>Flumazenil injection, USP. Ficha técnica estadounidense publicada en DailyMed. Actualización publicada: 03/01/2020; consultada el 10/09/2026.</p><p><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8175c1eb-80af-48f1-813c-c8f0e736d894">Abrir ficha en DailyMed</a></p><p class="small">Apartado cotejado: Dosage and Administration, Management of Suspected Benzodiazepine Overdose in Adult Patients (PDF pp. 18–19; límites en p. 19). Incorporado solo para comparar los límites de titulación en sobredosis del adulto.</p></li>
+</ol>
+<h3>Ámbito de la guía</h3>
+<p>Esta guía está pensada para consultar y estudiar la intoxicación en adultos con circulación espontánea. No es un protocolo aprobado por el centro. No aborda pediatría, parada cardiaca, deshabituación ni el tratamiento completo de otras intoxicaciones. Las pautas de anestesia y policonsumo se incluyen para comparar situaciones clínicas.</p>
+<a class="back" href="#inicio">Volver al inicio</a>
+</section>
+<footer class="document-footer"><p>Material educativo. Referencias y condiciones de acceso en <a href="#bibliografia">Fuentes y alcance</a>.</p></footer>
+</main>
+</div>
+<dialog class="search-dialog" aria-labelledby="search-title">
+<div class="search-heading"><h2 id="search-title">Buscar en la guía</h2><button type="button" class="tool-button search-close" aria-label="Cerrar búsqueda">Cerrar</button></div>
+<div class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="search" aria-label="Buscar en el contenido" placeholder="Resedación, vía aérea, carbón…" autocomplete="off" spellcheck="false"></div>
+<p class="search-status" role="status" aria-live="polite"></p>
+<ul class="search-results" aria-label="Temas encontrados"></ul>
+</dialog>
+<script>
+(() => {
+  'use strict';
+  const body = document.body;
+  const nav = document.querySelector('.index');
+  const menu = document.querySelector('.menu-toggle');
+  const dialog = document.querySelector('.search-dialog');
+  const input = dialog.querySelector('input');
+  const resultList = dialog.querySelector('.search-results');
+  const status = dialog.querySelector('.search-status');
+  const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es');
+  const headings = [...document.querySelectorAll('main h2, main h3, main h4')].filter(h => !h.closest('.algorithm'));
+
+  // Buscar dentro de un tema conserva juntas las condiciones de cada recomendación.
+  const topics = headings.map((heading, index) => {
+    const parent = heading.parentElement;
+    const target = parent.id && parent.firstElementChild === heading ? parent : heading;
+    if (!target.id) target.id = `tema-guia-${index + 1}`;
+    const range = document.createRange();
+    range.setStartAfter(heading);
+    if (headings[index + 1]) range.setEndBefore(headings[index + 1]);
+    else range.setEndBefore(document.querySelector('.document-footer'));
+    const fragment = range.cloneContents();
+    fragment.querySelectorAll('p, li, dt, dd, th, td, caption, figcaption, h4, div, br, .dose, .support > strong')
+      .forEach(element => element.after(document.createTextNode(' ')));
+    const text = fragment.textContent.replace(/\s+/g, ' ').trim();
+    return { id: target.id, title: heading.textContent.trim(), text, searchable: normalize(`${heading.textContent} ${text}`) };
+  });
+
+  // Solo se pliegan párrafos formados íntegramente por enlaces bibliográficos.
+  document.querySelectorAll('p.sources').forEach(p => {
+    const onlyLinks = [...p.childNodes].every(node => node.nodeType === Node.TEXT_NODE
+      ? !node.textContent.trim() : node.nodeType === Node.ELEMENT_NODE && node.tagName === 'A');
+    if (!onlyLinks) return;
+    const details = document.createElement('details');
+    details.className = 'source-disclosure';
+    const summary = document.createElement('summary');
+    summary.textContent = `Consultar fuentes (${p.querySelectorAll('a').length})`;
+    p.before(details);
+    details.append(summary, p);
+  });
+
+  const setMenu = open => {
+    body.classList.toggle('nav-open', open);
+    menu.setAttribute('aria-expanded', String(open));
+  };
+  menu.addEventListener('click', () => setMenu(!body.classList.contains('nav-open')));
+  const focusTarget = id => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    target.setAttribute('tabindex', '-1');
+    requestAnimationFrame(() => target.focus({ preventScroll: true }));
+  };
+  nav.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    setMenu(false);
+    focusTarget(link.hash.slice(1));
+  });
+  document.addEventListener('click', event => {
+    if (body.classList.contains('nav-open') && !nav.contains(event.target) && !menu.contains(event.target)) setMenu(false);
+  });
+
+  const renderResults = () => {
+    const words = normalize(input.value.trim()).split(/\s+/).filter(Boolean);
+    const matches = words.length ? topics.filter(topic => words.every(word => topic.searchable.includes(word))) : [];
+    const titleMatches = topic => words.filter(word => normalize(topic.title).includes(word)).length;
+    matches.sort((a, b) => titleMatches(b) - titleMatches(a));
+    const shown = matches.slice(0, 16);
+    resultList.replaceChildren();
+    status.textContent = !words.length ? 'Busca un tema, una prueba o un fármaco.' : matches.length
+      ? `${matches.length} ${matches.length === 1 ? 'tema encontrado' : 'temas encontrados'}${matches.length > shown.length ? '. Se muestran los primeros 16.' : '.'}`
+      : 'No hay coincidencias. Prueba con otro término.';
+    shown.forEach(topic => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${topic.id}`;
+      const title = document.createElement('strong');
+      title.textContent = topic.title;
+      const snippet = document.createElement('span');
+      const matchAt = normalize(topic.text).indexOf(words[0]);
+      let start = Math.max(0, matchAt - 45);
+      if (start) start = topic.text.lastIndexOf(' ', start) + 1;
+      snippet.textContent = `${start ? '… ' : ''}${topic.text.slice(start, start + 175)}${topic.text.length > start + 175 ? '…' : ''}`;
+      a.append(title, snippet);
+      li.append(a);
+      resultList.append(li);
+    });
+  };
+  const openSearch = () => {
+    setMenu(false);
+    dialog.showModal();
+    renderResults();
+    input.focus();
+    input.select();
+  };
+  document.querySelector('.search-open').addEventListener('click', openSearch);
+  document.querySelector('.search-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      dialog.close();
+    }
+  });
+  input.addEventListener('input', renderResults);
+  input.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown' || event.key === 'Enter') {
+      const first = resultList.querySelector('a');
+      if (first) { event.preventDefault(); event.key === 'Enter' ? first.click() : first.focus(); }
+    }
+  });
+  resultList.addEventListener('keydown', event => {
+    if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
+    const links = [...resultList.querySelectorAll('a')];
+    const index = links.indexOf(document.activeElement);
+    if (index < 0) return;
+    event.preventDefault();
+    const next = index + (event.key === 'ArrowDown' ? 1 : -1);
+    if (next < 0) input.focus();
+    else links[Math.min(next, links.length - 1)].focus();
+  });
+  resultList.addEventListener('click', event => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    dialog.close();
+    focusTarget(link.hash.slice(1));
+  });
+  document.addEventListener('keydown', event => {
+    const editing = event.target.matches('input, textarea, select, [contenteditable="true"]');
+    if ((!editing && event.key === '/') || ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k')) {
+      event.preventDefault();
+      if (!dialog.open) openSearch();
+    }
+    if (event.key === 'Escape' && body.classList.contains('nav-open')) { setMenu(false); menu.focus(); }
+  });
+
+  const sizeButton = document.querySelector('.text-size');
+  sizeButton.addEventListener('click', () => {
+    const large = body.classList.toggle('large-text');
+    sizeButton.setAttribute('aria-pressed', String(large));
+    sizeButton.setAttribute('aria-label', large ? 'Restaurar tamaño del texto' : 'Aumentar tamaño del texto');
+    sizeButton.textContent = large ? 'A−' : 'A+';
+  });
+  document.querySelector('.print-button').addEventListener('click', () => window.print());
+  let printState = [];
+  window.addEventListener('beforeprint', () => {
+    if (printState.length) return;
+    printState = [...document.querySelectorAll('.source-disclosure')].map(details => [details, details.open]);
+    printState.forEach(([details]) => { details.open = true; });
+  });
+  window.addEventListener('afterprint', () => {
+    printState.forEach(([details, open]) => { details.open = open; });
+    printState = [];
+  });
+
+  const navLinks = [...nav.querySelectorAll('ul a[href^="#"]')];
+  const navTargets = navLinks.map(link => ({ link, target: document.querySelector(link.hash) }));
+  let pendingFrame = false;
+  const updateCurrent = () => {
+    pendingFrame = false;
+    let current = navTargets[0];
+    let currentTop = -Infinity;
+    navTargets.forEach(item => {
+      const top = item.target.getBoundingClientRect().top;
+      if (top <= 150 && top > currentTop) { current = item; currentTop = top; }
+    });
+    navLinks.forEach(link => link === current.link ? link.setAttribute('aria-current', 'location') : link.removeAttribute('aria-current'));
+    document.querySelector('.current-section').textContent = window.scrollY < 250 ? 'Guía de guardia' : current.link.textContent;
+  };
+  window.addEventListener('scroll', () => {
+    if (!pendingFrame) { pendingFrame = true; requestAnimationFrame(updateCurrent); }
+  }, { passive: true });
+  window.addEventListener('resize', updateCurrent);
+  body.classList.add('enhanced');
+  updateCurrent();
+})();
+
+</script>
+</body>
+</html>
